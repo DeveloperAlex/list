@@ -1,0 +1,84 @@
+...................................................................................................
+Works!!!!!!  Even Live Reload!!!!!!!!!
+ng serve --host 0.0.0.0 --port 8080 --live-reload-port 8081
+...................................................................................................
+
+
+
+//Created this workspace using empty template.
+//https://cli.angular.io/
+
+node -v
+nvm install node
+node -v
+
+
+npm -v
+npm install -g npm
+npm -v
+
+ng -v
+npm install -g angular-cli
+ng -v
+
+//Need to up RAM to 1.5 GB (instead of just 1 GB).
+ng new ng2temp001
+
+
+
+
+
+git config user.name "DeveloperAlex"  //Isn't working. Ugh.
+git branch -u origin/master
+git merge origin/master --allow-unrelated-histories
+git fetch
+git pull
+git push
+
+
+
+
+
+
+
+
+cd ng2temp001
+ng build
+ng serve --port 8080 --live-reload-port 49153    //Live Reload wont work automatically - gotta research...
+// .ember-cli file  //https://github.com/angular/angular-cli/issues/1156#issuecomment-227412924
+
+ng serve --port 8080 --host  //We need to give the "host" too - since we're not running on 127.0.0.1 or 0.0.0.0
+ng serve --port $PORT --host $HOST   //--live-reload-port 8081  //Live Reload isn't working - ugh.
+
+
+
+//https://chrome.google.com/webstore/detail/cloud9/nbdmccoknlfggadpfkmcpnamfnbkmkcp/reviews?hl=en-US
+//> Cloud9 app for Google Chrome. Adds copy/paste.
+
+
+//https://community.c9.io/t/getting-started-with-angularjs/1729/6
+npm install -g http-server
+npm install -g concurrently
+npm install -g typescript@latest
+npm install --save typescript@latest  //Odd tsc1.8 won't upgrade to tsc2.1.5
+tsc --version
+http-server -a $IP -p $PORT && tsc && concurrently "npm run tsc:w"
+//http-server -a $IP -p $PORT && tsc && concurrently "tsc -w"
+
+
+
+ng serve --port 8080 --live-reload-port 8082   //https://mattsramblingsofatechie.blogspot.com/2016/06/angular-2-time-to-jump-in-setup.html
+
+Ideas:  
+> SystemJS  (vs. webpack)
+> create a bs-config.json file with the desired port referenced as an override
+> https://blog.oasisdigital.com/2016/angular-2-cli-2-minutes-cloud-9/   //Youtube video's webpage.
+>> source <(curl -s https://angularbootcamp.com/c9a2cli)
+
+
+...................................................................................................
+Works!!!!!!  Even Live Reload!!!!!!!!!
+ng serve --host 0.0.0.0 --port 8080 --live-reload-port 8081
+...................................................................................................
+
+
