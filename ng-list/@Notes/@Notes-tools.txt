@@ -1,4 +1,15 @@
 
+Firebase:
+ https://console.firebase.google.com/project/ngfirebase-ebc9d/overview
+ https://console.firebase.google.com/project/ngfirebase-ebc9d/database/rules
+  {
+    "rules": {
+      ".read": "true",
+      ".write": "auth != null"
+    }
+  }
+
+
 Links:
  https://github.com/angular/angular-cli
 
