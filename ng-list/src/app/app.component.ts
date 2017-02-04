@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {AngularFire } from 'angularfire2';
 
 @Component({
@@ -10,14 +10,23 @@ export class AppComponent {
   title = 'app works!';
   items = ['one', 'two', 'three'];
   cuisines;
+  private subscription;
 
-  constructor(af: AngularFire) {
-    console.log(af);
-    af.database.list('/food-idea/cuisines')
+  constructor(private af: AngularFire) {
+  }
+  
+  ngOnInit() {
+    console.log(this.af);
+    this.subscription = this.af.database.list('/food-idea/cuisines')
     .subscribe(x => {
       this.cuisines = x;
       console.log(this.cuisines);
     });
   }
+  
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+  
   
 }
