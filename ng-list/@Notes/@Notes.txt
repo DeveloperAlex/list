@@ -9,9 +9,13 @@ ng serve --host 0.0.0.0 --port 8080 --live-reload-port 8081
 //https://cli.angular.io/
 
 node -v
+//nvm's site: https://github.com/creationix/nvm/blob/master/README.markdown
+//http://stackoverflow.com/questions/30631725/update-node-js-version-inside-cloud-9-ide
+//nvm install 5.5.0
 nvm install node
+nvm use 7.4.0
+nvm alias default v7.4.0
 node -v
-
 
 npm -v
 npm install -g npm
@@ -19,27 +23,19 @@ npm -v
 
 ng -v
 npm install -g angular-cli
+npm install -g angular-cli@latest
 ng -v
 
 //Need to up RAM to 1.5 GB (instead of just 1 GB).
-ng new ng2temp001
+ng new ng2-list
 
 
-
-
-
-git config user.name "DeveloperAlex"  //Isn't working. Ugh.
+git config user.name "DeveloperAlex"  //Isn't working. Ugh. Need to research.
 git branch -u origin/master
-git merge origin/master --allow-unrelated-histories
+git merge origin/master --allow-unrelated-histories   //Works
 git fetch
 git pull
 git push
-
-
-
-
-
-
 
 
 cd ng2temp001
@@ -57,8 +53,8 @@ ng serve --port $PORT --host $HOST   //--live-reload-port 8081  //Live Reload is
 
 
 //https://community.c9.io/t/getting-started-with-angularjs/1729/6
-npm install -g http-server
-npm install -g concurrently
+//npm install -g http-server   //Didnt need to do this the 2nd time I setup ng.
+//npm install -g concurrently  //Didnt need to do this the 2nd time I setup ng.
 npm install -g typescript@latest
 npm install --save typescript@latest  //Odd tsc1.8 won't upgrade to tsc2.1.5
 tsc --version
