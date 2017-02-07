@@ -24,6 +24,7 @@ npm -v
 ng -v
 npm install -g angular-cli
 npm install -g angular-cli@latest
+> "we are moving the CLI npm package to "@angular/cli" with the next release".
 ng -v
 
 //Need to up RAM to 1.5 GB (instead of just 1 GB).
@@ -59,7 +60,7 @@ npm install -g typescript@latest
 npm install --save typescript@latest  //Odd tsc1.8 won't upgrade to tsc2.1.5
 tsc --version
 http-server -a $IP -p $PORT && tsc && concurrently "npm run tsc:w"
-//http-server -a $IP -p $PORT && tsc && concurrently "tsc -w"
+ng//http-server -a $IP -p $PORT && tsc && concurrently "tsc -w"
 
 
 
