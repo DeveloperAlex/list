@@ -42,7 +42,7 @@ git push
 
 
 cd ng2temp001
-ng build
+ng build -w
 ng serve --port 8080 --live-reload-port 49153    //Live Reload wont work automatically - gotta research...
 // .ember-cli file  //https://github.com/angular/angular-cli/issues/1156#issuecomment-227412924
 

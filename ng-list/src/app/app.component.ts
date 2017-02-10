@@ -9,8 +9,8 @@ import {AngularFire } from 'angularfire2';
 export class AppComponent {
   title = 'app works!';
   items = ['one', 'two', 'three'];
-  cuisines;
-  private subscription;
+  cuisines: any;
+  private subscription: any;
 
   constructor(private af: AngularFire) {
   }
