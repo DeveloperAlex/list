@@ -1,18 +1,27 @@
 {
   "compilerOptions": {
+    "alwaysStrict": true,
     "baseUrl": "",
     "declaration": false,
+    "diagnostics": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
     "lib": ["es6", "dom"],
     "mapRoot": "./",
     "module": "es6",
     "moduleResolution": "node",
     "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
     "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "outDir": "../dist/out-tsc",
+    "removeComments": false,
+    "strictNullChecks": true,
     "sourceMap": true,
-    "target": "es5",
+    "target": "es6",
     "typeRoots": [
       "../node_modules/@types"
     ]
