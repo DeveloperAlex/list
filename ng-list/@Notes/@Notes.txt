@@ -22,10 +22,11 @@ npm install -g npm
 npm -v
 
 ng -v
-npm install -g angular-cli
-npm install -g angular-cli@latest
+XX npm install -g angular-cli XX XX npm install -g angular-cli@latest XX
+npm install -g @angular/cli
 > "we are moving the CLI npm package to "@angular/cli" with the next release".
 ng -v
+
 
 //Need to up RAM to 1.5 GB (instead of just 1 GB).
 ng new ng2-list
@@ -79,5 +80,23 @@ Ideas:
 Works!!!!!!  Even Live Reload!!!!!!!!!
 ng serve --host 0.0.0.0 --port 8080 --live-reload-port 8081
 ...................................................................................................
+
+
+
+
+
+--Trying to fix latest ng build -w
+--https://github.com/angular/angular-cli/issues/4425  //I added a comment on how to fix the bug (on 2/14/2017 @ 11:50am).
+> Basically run "ng new tempapp" and copy/paste in any updates to the package.json file. Delete node_modules. Then run "npm install". To get it working again.
+ * npm uninstall -g angular-cli  //AlexS idea - it was also installed locally (so I deleted that too).
+ * npm uninstall @angular/cli -g
+ * npm install rxjs -g
+ * npm cache clean
+ * npm install @angular/cli -g
+ * //ng update  //Not sure this helped any.
+ ** Try doing an "ng --init" & merge in its changes to the package.json file.
+ 
+ 
+
 
 

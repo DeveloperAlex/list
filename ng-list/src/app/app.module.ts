@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ export const firebaseConfig = {
   messagingSenderId: "1006700743662"
 };
 
+const appRoutes: Routes = [];
+
 @NgModule({
   declarations: [
     AppComponent
@@ -22,6 +25,7 @@ export const firebaseConfig = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],

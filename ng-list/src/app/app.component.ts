@@ -6,7 +6,7 @@ import {AngularFire } from 'angularfire2';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'app works!';
   items = ['one', 'two', 'three'];
   cuisines: any;
