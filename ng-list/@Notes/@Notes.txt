@@ -32,14 +32,6 @@ ng -v
 ng new ng2-list
 
 
-git config user.name "DeveloperAlex"  //Isn't working. Ugh. Need to research.
-git config --global credential.helper 'cache --timeout 86400'   //3600=1 hr, 86400=24 hrs //Works, only have to entry da@gmail + A3 once per day.
-> Read "git help credentials" for more info.
-git branch -u origin/master
-git merge origin/master --allow-unrelated-histories   //Works
-git fetch
-git pull
-git push
 
 
 cd ng2temp001
