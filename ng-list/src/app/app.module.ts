@@ -17,6 +17,11 @@ export const firebaseConfig = {
 
 const appRoutes: Routes = [];
 
+//Notes:
+// declarations = get all of the app's classes decorated w/ @Component. Directives & Pipes must be added to declarations too.
+// imports = get classes decorated w/ @NgModule.
+// providers = are services.
+// bootstrap = launches the app by creating the components (listed in bootstrap) and inserting them into the browser dom.
 @NgModule({
   declarations: [
     AppComponent
