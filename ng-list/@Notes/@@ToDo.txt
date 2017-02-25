@@ -1,0 +1,37 @@
+
+___Currently Reading___
+https://angular.io/docs/ts/latest/guide/dependency-injection.html#!#implicit-injector-creation
+
+
+___ToDo___
+* Where do I put the model classes? Like what's the folder structure and/or naming convention.
+>> Would love to find a good example. Or maybe the "Style Guide" would have a suggestion.
+
+
+
+___Read___
+* ng2 Style Guide:
+>> https://angular.io/docs/ts/latest/guide/style-guide.html
+
+Cheatsheet (know 100%): https://angular.io/docs/ts/latest/guide/cheatsheet.html
+
+https://angular.io/docs/ts/latest/guide/template-syntax.html
+https://angular.io/docs/ts/latest/guide/dependency-injection.html
+https://angular.io/docs/ts/latest/guide/forms.html
+
+* Glossary (explains concepts - more than just word definitions):
+>> https://angular.io/docs/ts/latest/guide/glossary.html
+
+* Continue reading thru all of angular.io website (so I know where to find answers to questions quick).
+
+* MDN: Lot's of good stuff there. I should know their website forward & backward.
+>> https://developer.mozilla.org/en-US/docs/Web/API/Event
+
+
+
+___Videos___
+* Anything new on Egghead.io?
+* Udemy.com
+* Pluralsight.com - what are they having for videos these days? Since that may drive questions on interviews.
+
+

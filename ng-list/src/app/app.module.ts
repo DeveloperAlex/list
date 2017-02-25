@@ -15,11 +15,19 @@ export const firebaseConfig = {
   messagingSenderId: "1006700743662"
 };
 
-const appRoutes: Routes = [];
+
+//We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
+// Seee bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
+const routes: Routes = [
+    { path: '', component: AppComponent },
+    { path: '**', component: AppComponent }
+  ];
+
 
 //Notes:
 // declarations = get all of the app's classes decorated w/ @Component. Directives & Pipes must be added to declarations too.
 // imports = get classes decorated w/ @NgModule.
+// exports = List of components, directives, and pipes visible to modules that import this module.
 // providers = are services.
 // bootstrap = launches the app by creating the components (listed in bootstrap) and inserting them into the browser dom.
 @NgModule({
@@ -30,7 +38,7 @@ const appRoutes: Routes = [];
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
