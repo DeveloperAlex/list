@@ -1,0 +1,7 @@
+.route-selected {
+    pointer-events: none; 
+    cursor: default;
+    color: #404040;
+    text-decoration: none;
+    background-color: yellow;
+}
