@@ -7,6 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
+import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
@@ -17,9 +18,11 @@ export const firebaseConfig = {
 };
 
 //We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
-// Seee bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
+// See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
 const routes: Routes = [
     { path: '', component: AppComponent },
+    { path: 'netflixlist', component: NetflixListComponent },
+    { path: 'wishlist', component: WishListComponent },
     { path: '**', component: AppComponent }
 ];
 
@@ -32,7 +35,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    WishListComponent
+    WishListComponent,
+    NetflixListComponent
   ],
   imports: [
     BrowserModule,
