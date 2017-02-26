@@ -1,0 +1,10 @@
+To update Angular:
+- Rename ng-list folder.
+- Commit everything to github.
+- Restart c9 - otherwise updates to files will "magically" reappear (annoyingly).
+
+
+https://www.npmjs.com/package/angularfire2
+> npm install firebase angularfire2 --save
+>> Just remove the old versions from package.json.
+>> Move the newly added items to the top of package.json - so its easier to see what I've changed in it.

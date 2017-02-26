@@ -13,8 +13,8 @@
   },
   "private": true,
   "dependencies": {
-    "angularfire2": "^2.0.0-beta.8",
-    "firebase": "^3.6.10",
+    "angularfire2": "^2.0.0-beta.7",
+    "firebase": "^3.6.8",
     "@angular/common": "^2.4.0",
     "@angular/compiler": "^2.4.0",
     "@angular/core": "^2.4.0",
