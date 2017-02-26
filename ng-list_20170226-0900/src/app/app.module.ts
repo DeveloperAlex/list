@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
+import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
@@ -32,7 +33,9 @@ const routes: Routes = [
 // bootstrap = launches the app by creating the components (listed in bootstrap) and inserting them into the browser dom.
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NetflixListComponent,
+    NetflixListComponent
   ],
   imports: [
     BrowserModule,
