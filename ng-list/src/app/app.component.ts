@@ -13,6 +13,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private subscription: any;
 
   constructor(private af: AngularFire) {
+    console.log('ctor');
   }
   
   ngOnInit() {

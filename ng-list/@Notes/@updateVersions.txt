@@ -8,3 +8,19 @@ https://www.npmjs.com/package/angularfire2
 > npm install firebase angularfire2 --save
 >> Just remove the old versions from package.json.
 >> Move the newly added items to the top of package.json - so its easier to see what I've changed in it.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+https://www.npmjs.com/package/angular-cli
+    Global package:
+        npm uninstall -g angular-cli
+        npm cache clean
+        npm install -g angular-cli@latest
+    
+    Local project package:
+        rm -rf node_modules dist # use rmdir on Windows
+        npm install --save-dev angular-cli@latest
+        npm install
+        ng update
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

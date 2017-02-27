@@ -5,3 +5,6 @@ Angular CLI
 - ng g service myservice
 
 
+https://www.npmjs.com/package/angular-cli
+https://github.com/angular/angular-cli
+
