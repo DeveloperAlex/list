@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
+import { WishService } from './services/wish.service';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
   authDomain: "ngfirebase-ebc9d.firebaseapp.com",
@@ -45,7 +47,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [WishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,7 @@
 
 Angular CLI
 - ng g component wish-list
+- ng g class myclass
+- ng g service myservice
+
 
