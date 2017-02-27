@@ -22,11 +22,13 @@ export const firebaseConfig = {
 //We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
 // See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
 const routes: Routes = [
-    { path: '', component: AppComponent },
     { path: 'netflixlist', component: NetflixListComponent },
-    { path: 'wishlist', component: WishListComponent },
-    { path: '**', component: AppComponent }
+    { path: 'wishlist', component: WishListComponent }
 ];
+//  <base href="/">  //Caused doubling of ui (both of these do).
+//  { path: '', component: AppComponent },
+//  { path: '**', component: AppComponent }  //Caused doubling of ui (both of these do).
+
 
 //Notes:
 // declarations = get all of the app's classes decorated w/ @Component. Directives & Pipes must be added to declarations too.
