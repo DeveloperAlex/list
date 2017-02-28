@@ -22,9 +22,20 @@ export const firebaseConfig = {
 //We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
 // See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
 const routes: Routes = [
-    { path: 'netflixlist', component: NetflixListComponent },
-    { path: 'wishlist', component: WishListComponent }
+  { path: 'netflixlist', component: NetflixListComponent },
+  { path: 'wishlist',    component: WishListComponent }
 ];
+
+// { path: 'home',        component: AppComponent },
+// { path: '', redirectTo: '/home', pathMatch: 'full' }
+// { path: '**', component: PageNotFoundComponent }
+
+// const routes: Routes = [
+//     { path: 'netflixlist', component: NetflixListComponent },
+//     { path: 'wishlist', component: WishListComponent }
+// ];
+
+
 //  <base href="/">  //Caused doubling of ui (both of these do).
 //  { path: '', component: AppComponent },
 //  { path: '**', component: AppComponent }  //Caused doubling of ui (both of these do).
