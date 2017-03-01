@@ -15,7 +15,7 @@ https://www.npmjs.com/package/angular-cli
     Global package:
         npm uninstall -g angular-cli
         npm cache clean
-        npm install -g angular-cli@latest
+        npm install -g angular-cli@latest   //S/n this be "npm install -g @angular/cli"?
     
     Local project package:
         rm -rf node_modules dist # use rmdir on Windows
