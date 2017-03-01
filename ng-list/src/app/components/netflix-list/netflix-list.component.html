@@ -1,9 +1,11 @@
-<p>
+<p class="h1">
   Netflix List
 </p>
 
 <div>
     <ul>
-        <li *ngFor="let c of cuisines">{{ c.$value }}</li>
+        <li class="row" *ngFor="let c of cuisines">
+            <span class="col-md-4">{{ c.$value }}</span>
+        </li>
     </ul>
 </div>

@@ -11,7 +11,7 @@ export class NetflixListComponent implements OnInit, OnDestroy {
   private subscription: any;
 
   constructor(private af: AngularFire) { 
-    console.log('ctor - wishlist');
+    console.log('ctor - netflix');
   }
 
   ngOnInit() {
