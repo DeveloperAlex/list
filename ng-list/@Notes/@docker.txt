@@ -1,0 +1,33 @@
+key (to search for): Dockerfile
+
+
+https://docs.docker.com/machine/drivers/gce/
+
+https://cloud.google.com/container-engine
+    https://cloud.google.com/container-engine/docs/   // READ ME !!!!!!!!!!!!!!!!!!!!!!!
+        https://cloud.google.com/container-engine/docs/quickstart
+    https://cloud.google.com/container-engine/docs/node-image-migration
+
+
+https://www.docker.com/cp/docker-and-kubernetes
+
+https://github.com/docker/docker
+    https://github.com/yeasy/docker_practice
+    https://github.com/chef-cookbooks/docker
+
+
+https://github.com/docker/docker
+    Here's a typical Docker build process:
+    FROM ubuntu:12.04
+        RUN apt-get update && apt-get install -y python python-pip curl
+        RUN curl -sSL https://github.com/shykes/helloflask/archive/master.tar.gz | tar -xzv
+        RUN cd helloflask-master && pip install -r requirements.txt
+
+
+https://hub.docker.com/
+> https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=1&q=angular&starCount=0
+
+
+https://docs.docker.com/docker-for-windows/
+
+

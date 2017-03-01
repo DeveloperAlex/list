@@ -1,0 +1,9 @@
+firebase
+
+Use Chrome browser (I guess):
+- https://firebase.google.com/
+- https://console.firebase.google.com/?pli=1
+
+
+
+

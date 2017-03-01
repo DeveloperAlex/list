@@ -1,4 +1,16 @@
 
+___Install___
+* https://github.com/ng-bootstrap/ng-bootstrap   // Is this the most popular Bootstrap for ng2/4?  And s/ I use npm or bower to install it??
+>> https://github.com/ng-bootstrap/ng-bootstrap/tree/master/demo/src/app/components   // The ng version seems to have stuff I may want/need.
+
+
+
+___Potential_Ideas___
+* https://github.com/angular/in-memory-web-api
+* https://github.com/jdgarvey/angular-flashcards/tree/master/src/assets/markdown
+* https://github.com/johnpapa/AngularAspNetCore
+
+
 ___Currently Reading___
 https://angular.io/docs/ts/latest/guide/dependency-injection.html#!#implicit-injector-creation
 
