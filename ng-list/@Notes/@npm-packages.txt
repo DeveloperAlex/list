@@ -1,6 +1,9 @@
 
 ===================================================================================================
 Bootstrap:
+ng2-bootstrap:
+demos: http://valor-software.com/ng2-bootstrap/#/
+
 
 Going to use this one. Very popular.  "This module plays nice with Bootstrap CSS v3 and v4".
     http://valor-software.com/ng2-bootstrap/#/
