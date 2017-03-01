@@ -1,25 +1,4 @@
 
-Bootstrap:
-
-    Going to use this one. Very popular.  "This module plays nice with Bootstrap CSS v3 and v4".
-        http://valor-software.com/ng2-bootstrap/#/
-            https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
-            https://stackoverflow.com/questions/tagged/ng2-bootstrap
-
-    Too new - not ready for what I need. And its 1/2 as popular as ng2-bootstrap.
-        Currently v1.0.0-alpha.20 - on Bootstrap 4 Alpha (made by the Angular Team itself):
-            https://ng-bootstrap.github.io/#/home
-                https://github.com/ng-bootstrap/ng-bootstrap
-
-
-xx    https://github.com/angular-ui/bootstrap   // Angular 1
-xx        http://angular-ui.github.io/bootstrap/
-
-
-
-
-
-
 ___Install___
 * https://github.com/ng-bootstrap/ng-bootstrap   // Is this the most popular Bootstrap for ng2/4?  And s/ I use npm or bower to install it??
 >> https://github.com/ng-bootstrap/ng-bootstrap/tree/master/demo/src/app/components   // The ng version seems to have stuff I may want/need.

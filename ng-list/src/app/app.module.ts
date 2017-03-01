@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
+import { AlertModule } from 'ng2-bootstrap';  //https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 
 import { AppComponent } from './app.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
@@ -58,7 +59,8 @@ const routes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AlertModule.forRoot()
   ],
   providers: [WishService],
   bootstrap: [AppComponent]
