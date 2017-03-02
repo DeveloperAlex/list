@@ -1,9 +1,13 @@
-<p>
-  Wish List
-</p>
+<div class="row">
+    <div class="col-md-12">
 
-<div>
-    <ul>
-        <li *ngFor="let c of cuisines">{{ c.$value }}</li>
-    </ul>
+        <h3>Wish List</h3>
+        
+        <ul>
+            <li *ngFor="let c of cuisines">
+                <span>{{ c.$value }}</span>
+            </li>
+        </ul>
+
+    </div>
 </div>
