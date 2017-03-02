@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
-//import { Wish } from '';
+import { AngularFire } from 'angularfire2';
+
+import { Wish } from '../models/wish';
 
 @Injectable()
 export class WishService {
 
-  constructor() { }
+  constructor(private af: AngularFire) {
+    
+  }
+
+
+  
+  getWishes() : any {
+    
+  }
 
 }
