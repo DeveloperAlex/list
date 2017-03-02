@@ -1,0 +1,24 @@
++++
+  https://docs.c9.io/docs/keybindings
+    https://docs.c9.io/v1.0/docs/customizing-keybindings
+  Alt-S = switch back & forth to Bash tab.
+  Ctrl-1, Ctrl-2, Ctrl-3... = switch between tabs (by their number position).
++++
+
+
+sh-esc = select tree
+ctrl-I = toggle showing Workspace tree.
+alt-W = close tab
+ctrl-[  //  ctrl-] = go left or right (tab-wise).
+ctrl-E = search
+F6 = toggle console
+alt-left // alt-right = go to beginning or end of line.
+ctrl-home // ctrl-end = go to top/bottom of file.
+ctrl-P = toggle between top/bottom of a section (like visual studio's ctrl-]).
+alt-K // alt-sh-k = hop between each of the same variable in a file (Find Next).  Shift goes in reverse.
+ctrl-/ = toggle commenting.
+alt-T = open terminal.
+ctrl-U // ctrl-sh-U = uppercase/lowercase.
+
+
+
