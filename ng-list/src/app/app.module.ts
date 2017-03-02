@@ -6,10 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AlertModule } from 'ng2-bootstrap';  //https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 
+//declarations:
 import { AppComponent } from './app.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
+//providers:
 import { WishService } from './services/wish.service';
 
 export const firebaseConfig = {
@@ -62,7 +64,9 @@ const routes: Routes = [
     AngularFireModule.initializeApp(firebaseConfig),
     AlertModule.forRoot()
   ],
-  providers: [WishService],
+  providers: [
+    WishService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

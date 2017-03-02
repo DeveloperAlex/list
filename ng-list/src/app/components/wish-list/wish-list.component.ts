@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AngularFire } from 'angularfire2';
+import { WishService } from '../../services/wish.service';
 
 @Component({
   selector: 'da-wish-list',
@@ -8,23 +9,25 @@ import { AngularFire } from 'angularfire2';
 })
 export class WishListComponent implements OnInit, OnDestroy {
   cuisines: any;
-  private subscription: any;
+  //private subscription: any;
 
-  constructor(private af: AngularFire) { 
+  constructor(private af: AngularFire, private wishService: WishService) { 
     console.log('ctor - wishlist');
   }
 
   ngOnInit() {
-    console.log(this.af);
-    this.subscription = this.af.database.list('/food-idea/cuisines')
-    .subscribe(x => {
-      this.cuisines = x;
-      console.log(this.cuisines);
-    });
+    // console.log(this.af);
+    // this.subscription = this.af.database.list('/food-idea/cuisines')
+    // .subscribe(x => {
+    //   this.cuisines = x;
+    //   console.log(this.cuisines);
+    // });
+    
+    this.cuisines = this.wishService.getWishes();  //Return a promise maybe? Since its not an Observable yet.
   }
   
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    //this.subscription.unsubscribe();
   }
 
 }
