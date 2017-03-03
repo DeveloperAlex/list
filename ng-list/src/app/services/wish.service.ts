@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFire } from 'angularfire2';
-//import { Observable } from rxjs/Observable;
-//import { Observable } from rxjs/Rx;
-//import 'rxjs/add/operator/map'
 import 'rxjs/Rx';  //Works (ie, doesn't complain about this line).
 import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs/Observable'  //http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html
-
+//import { Observable } from 'rxjs/Observable' // Works. //http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html
+import { Observable } from 'rxjs/Rx';  //Works.
 
 import { Wish } from '../models/wish';
 
@@ -23,10 +20,18 @@ export class WishService {
     return [ "hotdogs", "hamburgers" ];
   }
   
-  getWishesSubscription() : Observable<any> {
-    let result = this.af.database.list('/food-idea/cuisines');
-    return Observable.empty();
+  //https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0
+  getWishesSubscription() : Observable<Object[]> {
+    //return Observable.empty();
+    return this.af.database.list('/food-idea/cuisines');
   }
+
+
+
+  // getWishesSubscription() : Observable<any> {
+  //   let result = this.af.database.list('/food-idea/cuisines');
+  //   return Observable.empty();
+  // }
 
   // getWishes() : any {
   //   console.log(this.af);

@@ -23,7 +23,13 @@ export class WishListComponent implements OnInit, OnDestroy {
     //   console.log(this.cuisines);
     // });
     
-    this.cuisines = this.wishService.getWishes();  //Return a promise maybe? Since its not an Observable yet.
+    //this.cuisines = this.wishService.getWishes();  //Return a promise maybe? Since its not an Observable yet.
+    this.wishService.getWishesSubscription()
+      .do(console.log)
+      .subscribe(
+          x => this.cuisines = x
+        );
+    
   }
   
   ngOnDestroy() {

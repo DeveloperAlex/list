@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
+//import { firebaseConfig } from '../environments/firebase.config';  //https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/map';
 import { AlertModule } from 'ng2-bootstrap';  //https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 
 //declarations:
