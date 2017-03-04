@@ -1,0 +1,6 @@
+
+
+lsb_release -a
+> Ubuntu 14.04.3 LTS
+
+

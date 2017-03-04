@@ -22,3 +22,5 @@ ctrl-U // ctrl-sh-U = uppercase/lowercase.
 
 
 
+c9 ~/.bashrc = run in bash shell & it'll open the .bashrc file within a tab.
+
