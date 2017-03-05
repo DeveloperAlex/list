@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFire } from 'angularfire2';
-import 'rxjs/Rx';  //Works (ie, doesn't complain about this line).
+//import 'rxjs/Rx';  //Works (ie, doesn't complain about this line).
 import 'rxjs/add/operator/map';
 //import { Observable } from 'rxjs/Observable' // Works. //http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html
 import { Observable } from 'rxjs/Rx';  //Works.
@@ -16,9 +16,9 @@ export class WishService {
     console.log('ctor - wish');
   }
 
-  getWishes() : any {
-    return [ "hotdogs", "hamburgers" ];
-  }
+  // getWishes() : any {
+  //   return [ "hotdogs", "hamburgers" ];
+  // }
   
   //https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0
   getWishesSubscription() : Observable<Object[]> {

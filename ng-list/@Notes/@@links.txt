@@ -6,8 +6,13 @@ Example code:
 >> *** Definitely take a look at this!!!!! ***
 
 
+Firebase example:
+> https://github.com/angular-university/angular-firebase-app
+
 
 https://angular.io/docs/ts/latest/guide/router.html#!#child-routing-component
+
+Hero example code:
 https://angular.io/resources/live-examples/router/ts/eplnkr.html  //Live example
 https://angular.io/resources/zips/router/router.zip  //zip of the live example.
 > Cool Example!!!!

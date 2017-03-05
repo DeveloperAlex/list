@@ -1,13 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app.routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from '../environments/firebase.config';  //https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
+
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+
 import { AlertModule } from 'ng2-bootstrap';  //https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 
 //declarations:
@@ -64,7 +67,7 @@ import { WishService } from './services/wish.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig[0]),

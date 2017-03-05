@@ -1,3 +1,10 @@
+
+Example code:
+> https://github.com/angular-university/angular-firebase-app
+
+Login example code (not ng):
+> https://github.com/firebase/FirebaseUI-Web
+
 firebase
 
 Use Chrome browser (I guess):
