@@ -29,7 +29,8 @@ export const firebaseConfig = {
 // See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
 const routes: Routes = [
   { path: 'netflixlist', component: NetflixListComponent },
-  { path: 'wishlist',    component: WishListComponent }
+  { path: 'wishlist',    component: WishListComponent },
+  { path: 'chat', loadChildren: 'app/+group-chat/group-chat.module#GroupChatModule'}
 ];
 
 // { path: 'home',        component: AppComponent },

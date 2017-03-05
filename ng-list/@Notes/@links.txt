@@ -1,8 +1,0 @@
-
-
-Example code:
-- https://github.com/AngularClass/angular2-webpack-starter/tree/master/src
-- https://github.com/AngularClass/angular2-webpack-starter
->> *** Definitely take a look at this!! ***
-
-
