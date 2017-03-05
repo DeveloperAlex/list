@@ -3,13 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { routes } from './app.routes';
 import { AngularFireModule } from 'angularfire2';
-//import { firebaseConfig } from '../environments/firebase.config';  //https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
+import { firebaseConfig } from '../environments/firebase.config';  //https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import { AlertModule } from 'ng2-bootstrap';  //https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
-
-import { routes } from './app.routes';
 
 //declarations:
 import { AppComponent } from './app.component';
@@ -19,13 +18,13 @@ import { NetflixListComponent } from './components/netflix-list/netflix-list.com
 //providers:
 import { WishService } from './services/wish.service';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
-  authDomain: "ngfirebase-ebc9d.firebaseapp.com",
-  databaseURL: "https://ngfirebase-ebc9d.firebaseio.com",
-  storageBucket: "ngfirebase-ebc9d.appspot.com",
-  messagingSenderId: "1006700743662"
-};
+// export const firebaseConfig = {
+//   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
+//   authDomain: "ngfirebase-ebc9d.firebaseapp.com",
+//   databaseURL: "https://ngfirebase-ebc9d.firebaseio.com",
+//   storageBucket: "ngfirebase-ebc9d.appspot.com",
+//   messagingSenderId: "1006700743662"
+// };
 
 //We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
 // See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
@@ -68,7 +67,7 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig[0]),
     AlertModule.forRoot()
   ],
   providers: [
@@ -78,5 +77,6 @@ export const firebaseConfig = {
 })
 export class AppModule {
   routes = routes;
+  firebaseConfig = firebaseConfig;
   
 }
