@@ -6,7 +6,7 @@ import { ChatComponent } from './chat/chat.component';
 import { GroupChatComponent } from './group-chat.component';
 import { routes } from './group-chat.routes';
 
-console.log('`Group Chat` bundle loaded asynchronously');
+console.log('`Group Chat` bundle loaded asynchronously.');
 
 @NgModule({
   imports: [

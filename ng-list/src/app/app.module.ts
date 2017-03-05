@@ -9,6 +9,8 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import { AlertModule } from 'ng2-bootstrap';  //https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 
+import { routes } from './app.routes';
+
 //declarations:
 import { AppComponent } from './app.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
@@ -27,11 +29,12 @@ export const firebaseConfig = {
 
 //We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
 // See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
-const routes: Routes = [
-  { path: 'netflixlist', component: NetflixListComponent },
-  { path: 'wishlist',    component: WishListComponent },
-  { path: 'chat', loadChildren: 'app/+group-chat/group-chat.module#GroupChatModule'}
-];
+
+// const routes: Routes = [
+//   { path: 'netflixlist', component: NetflixListComponent },
+//   { path: 'wishlist',    component: WishListComponent },
+//   { path: 'chat', loadChildren: 'app/+group-chat/group-chat.module#GroupChatModule'}
+// ];
 
 // { path: 'home',        component: AppComponent },
 // { path: '', redirectTo: '/home', pathMatch: 'full' }
@@ -73,4 +76,7 @@ const routes: Routes = [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  routes = routes;
+  
+}

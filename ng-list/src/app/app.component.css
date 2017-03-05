@@ -1,7 +1,19 @@
+.active, .active a {
+    cursor: default;
+}
+
 .route-selected {
     pointer-events: none; 
     cursor: default;
     color: #404040;
     text-decoration: none;
-    background-color: yellow;
+    background-color: yellow !important;
+    /*background-color: #337ab7 !important;*/
 }
+
+.nav-pills > li.active.route-selected > a {
+    background-color: inherit;
+    color: #404040;
+}
+
+/*#33a6b7*/
