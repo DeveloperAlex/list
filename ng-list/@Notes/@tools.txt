@@ -24,3 +24,7 @@ Docs:
  https://docs.c9.io/docs/keybindings
 
 
+https://www.npmjs.com/package/karma-phantomjs-launcher
+> npm install --save-dev karma-phantomjs-launcher
+
+
