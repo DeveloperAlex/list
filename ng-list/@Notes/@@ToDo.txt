@@ -5,6 +5,10 @@ ___Install___
 
 
 
+Yarn = s/ we use this instead of NPM?
+
+
+
 ___Potential_Ideas___
 * https://github.com/angular/in-memory-web-api
 * https://github.com/jdgarvey/angular-flashcards/tree/master/src/assets/markdown
