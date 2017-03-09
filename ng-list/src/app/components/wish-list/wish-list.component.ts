@@ -9,9 +9,9 @@ import { WishService } from '../../services/wish.service';
 })
 export class WishListComponent implements OnInit, OnDestroy {
   cuisines: any;
-  //private subscription: any;
+  // private subscription: any;
 
-  constructor(private af: AngularFire, private wishService: WishService) { 
+  constructor(private af: AngularFire, private wishService: WishService) {
     console.log('ctor - wishlist');
   }
 
@@ -22,18 +22,18 @@ export class WishListComponent implements OnInit, OnDestroy {
     //   this.cuisines = x;
     //   console.log(this.cuisines);
     // });
-    
-    //this.cuisines = this.wishService.getWishes();  //Return a promise maybe? Since its not an Observable yet.
+
+    // this.cuisines = this.wishService.getWishes();  //Return a promise maybe? Since its not an Observable yet.
     this.wishService.getWishesSubscription()
       .do(console.log)
       .subscribe(
           x => this.cuisines = x
         );
-    
+
   }
-  
+
   ngOnDestroy() {
-    //this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 
 }

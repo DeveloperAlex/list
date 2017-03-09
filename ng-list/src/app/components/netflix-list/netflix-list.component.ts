@@ -10,7 +10,7 @@ export class NetflixListComponent implements OnInit, OnDestroy {
   cuisines: any;
   private subscription: any;
 
-  constructor(private af: AngularFire) { 
+  constructor(private af: AngularFire) {
     console.log('ctor - netflix');
   }
 
@@ -22,7 +22,7 @@ export class NetflixListComponent implements OnInit, OnDestroy {
       console.log(this.cuisines);
     });
   }
-  
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

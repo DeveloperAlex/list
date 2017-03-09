@@ -5,20 +5,20 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app.routes';
 import { AngularFireModule } from 'angularfire2';
-import { firebaseConfig } from '../environments/firebase.config';  //https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
+import { firebaseConfig } from '../environments/firebase.config';  // https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
 
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 
-import { AlertModule } from 'ng2-bootstrap';  //https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
+import { AlertModule } from 'ng2-bootstrap';  // https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 
-//declarations:
+// declarations:
 import { AppComponent } from './app.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
-//providers:
+// providers:
 import { WishService } from './services/wish.service';
 
 // export const firebaseConfig = {
@@ -29,8 +29,8 @@ import { WishService } from './services/wish.service';
 //   messagingSenderId: "1006700743662"
 // };
 
-//We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
-// See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
+// We'll need to add: "<router-outlet></router-outlet>" to the html - to use routing.
+//  See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
 
 // const routes: Routes = [
 //   { path: 'netflixlist', component: NetflixListComponent },
@@ -53,12 +53,12 @@ import { WishService } from './services/wish.service';
 //  { path: '**', component: AppComponent }  //Caused doubling of ui (both of these do).
 
 
-//Notes:
-// declarations = get all of the app's classes decorated w/ @Component. Directives & Pipes must be added to declarations too.
-// imports = get classes decorated w/ @NgModule.
-// exports = List of components, directives, and pipes visible to modules that import this module.
-// providers = are services.
-// bootstrap = launches the app by creating the components (listed in bootstrap) and inserting them into the browser dom.
+// Notes:
+//  declarations = get all of the app's classes decorated w/ @Component. Directives & Pipes must be added to declarations too.
+//  imports = get classes decorated w/ @NgModule.
+//  exports = List of components, directives, and pipes visible to modules that import this module.
+//  providers = are services.
+//  bootstrap = launches the app by creating the components (listed in bootstrap) and inserting them into the browser dom.
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,5 +81,4 @@ import { WishService } from './services/wish.service';
 export class AppModule {
   routes = routes;
   firebaseConfig = firebaseConfig;
-  
 }

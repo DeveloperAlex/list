@@ -1,5 +1,5 @@
-//Examples:
-// https://github.com/angular-university/angular-firebase-app/blob/master/src/app/router.config.ts
+// Examples:
+//  https://github.com/angular-university/angular-firebase-app/blob/master/src/app/router.config.ts
 
 import { Routes } from '@angular/router';
 import { NetflixListComponent, WishListComponent } from './components/index';

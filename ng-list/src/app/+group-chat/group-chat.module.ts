@@ -19,6 +19,6 @@ export class GroupChatModule {
   routes = routes;
 }
 
-//Use the following as a guide:
+// Use the following as a guide:
 //  https://github.com/AngularClass/angular2-webpack-starter/blob/master/src/app/%2Bdetail/detail.module.ts
 
