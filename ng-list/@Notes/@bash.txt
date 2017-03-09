@@ -1,4 +1,7 @@
 
+du-c9 | sort -h
+> Shows what files are consuming the most disk space.
+
 
 lsb_release -a
 > Ubuntu 14.04.3 LTS

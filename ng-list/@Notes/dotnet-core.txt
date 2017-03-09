@@ -1,0 +1,8 @@
+
+https://www.linkedin.com/pulse/net-core-cloud-9-ide-douglas-starnes
+> .NET Core on Cloud 9 IDE
+
+* Follow the steps at http://get.asp.net for Linux, 
+* then got the repo at https://github.com/aspnet/Home and ran the console app in the samples directory
+
+
