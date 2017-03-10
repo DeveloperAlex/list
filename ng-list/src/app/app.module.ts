@@ -19,6 +19,7 @@ import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
 // providers:
+import { CoreService } from './core';
 import { WishService } from './services/wish.service';
 
 // export const firebaseConfig = {
@@ -74,6 +75,7 @@ import { WishService } from './services/wish.service';
     AlertModule.forRoot()
   ],
   providers: [
+    CoreService,
     WishService
   ],
   bootstrap: [AppComponent]

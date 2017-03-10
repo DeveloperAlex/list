@@ -1,0 +1,7 @@
+rxjs notes
+
+
+http://reactivex.io/rxjs/
+http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-interval
+
+
