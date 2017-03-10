@@ -6,3 +6,8 @@ https://www.linkedin.com/pulse/net-core-cloud-9-ide-douglas-starnes
 * then got the repo at https://github.com/aspnet/Home and ran the console app in the samples directory
 
 
+Docker:
+> https://hub.docker.com/r/microsoft/dotnet/
+>> https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-dev
+
+

@@ -1,6 +1,16 @@
 key (to search for): Dockerfile
 
 
+Try:
+- https://hub.docker.com/r/microsoft/dotnet/  // See @dotnet-core.txt for more stuff.
+- https://hub.docker.com/_/busybox/   // Its small, quick to test/play with.
+- https://hub.docker.com/_/nginx/
+- https://hub.docker.com/_/node/
+- https://hub.docker.com/r/itzg/minecraft-server/
+- https://hub.docker.com/r/binhex/arch-moviegrabber/
+
+
+
 https://docs.docker.com/machine/drivers/gce/
 
 https://cloud.google.com/container-engine
