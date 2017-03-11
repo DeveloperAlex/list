@@ -8,7 +8,7 @@ import { WishService } from '../../services/wish.service';
   styleUrls: ['./wish-list.component.css']
 })
 export class WishListComponent implements OnInit, OnDestroy {
-  cuisines: any;
+  cuisines: Object[];
   // private subscription: any;
 
   constructor(private af: AngularFire, private wishService: WishService) {
