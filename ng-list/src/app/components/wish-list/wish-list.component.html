@@ -2,12 +2,17 @@
     <div class="col-md-12">
 
         <h3>Wish List ( {{ cuisines?.length }} wishes )</h3>
-        
+
+        <!--[ngClass]="{'md-btn md-btn-success': addwish.value, 'md-btn disabled': !addwish.value }"-->
+        <!--[ngStyle]="{'visibility':addwish.value?'visible':'hidden'}"-->
+
         <div>
-            Add Wish button goes here<br/>
-            Textbox goes here<br/>
-            <button (click)="addWish(addwish.value)">Add Wish</button>
-            <input type="text" placeholder="Wish to be added" #addwish />
+            <button (click)="addWish(addwish.value);addwish.value='';"
+            [ngStyle]="{'cursor':addwish.value?'default':'not-allowed'}"
+            [disabled]="!addwish.value">Add Wish</button>
+            <input #addwish type="text" autofocus placeholder="Wish to be added" maxlength="50" />
+            <!--Above is an example of a Template Reference Variable-->
+            <!--https://angular.io/docs/ts/latest/guide/template-syntax.html#!#template-reference-variable-->
         </div>
         <br/>
         

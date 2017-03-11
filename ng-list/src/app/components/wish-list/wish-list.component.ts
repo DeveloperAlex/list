@@ -27,8 +27,8 @@ export class WishListComponent implements OnInit, OnDestroy {
     this.wishService.getWishesSubscription()
       .do(console.log)
       .subscribe(
-          x => this.cuisines = x
-        );
+        x => this.cuisines = x
+      );
 
   }
   

@@ -29,36 +29,37 @@ export class AppComponent implements OnInit {  // implements OnInit, OnDestroy {
     
     // var timer$ = Observable.interval(5000);
     // timer$.subscribe(data );
-    
+    //
     // Observable.interval(5000).do(i => this.titleService.setTitle(`i= ${i}`));
     
-    this.coreService.setTitle('new-ish title');
+
+    // Works:
+    // this.coreService.setTitle('new-ish title');
+    // var source = Observable
+    //   .interval(1000 /* ms */)
+    //   .timeInterval()
+    //   .take(3);
+    // var subscription = source.subscribe(  // http://reactivex.io/documentation/operators/interval.html
+    //     function (x) {
+    //         console.log('Next: ' + x.value);
+    //         // this.titleService.setTitle('new title');
+    //         // this.coreService.setTitle('newest title');  // Gives error in F12 screen.
+    //     },
+    //     function (err) {
+    //         console.log('Error: ' + err);
+    //     },
+    //     function () {
+    //         console.log('Completed');
+    //         // this.titleService.setTitle('completed title');
+    //     }
+    // );
     
-    var source = Observable
-      .interval(2000 /* ms */)
-      .timeInterval()
-      .take(5);
-    
-    var subscription = source.subscribe(  // http://reactivex.io/documentation/operators/interval.html
-        function (x) {
-            console.log('Next: ' + x.value);
-            // this.titleService.setTitle('new title');
-            // this.coreService.setTitle('newest title');  // Gives error in F12 screen.
-        },
-        function (err) {
-            console.log('Error: ' + err);
-        },
-        function () {
-            console.log('Completed');
-            // this.titleService.setTitle('completed title');
-        });
-    
-    
-    // http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-interval
-    //var numbers = Rx.Observable.interval(1000);
-    var numbers = Observable.interval(3000).take(10);
-    numbers.subscribe(x => console.log(x));
-    //numbers.subscribe(x => this.coreService.setTitle(`title ${x}`) );
+
+    // Works:    
+    // //http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-interval
+    // var numbers = Observable.interval(1100).take(3);
+    // numbers.subscribe(x => console.log(x));
+    // //numbers.subscribe(x => this.coreService.setTitle(`title ${x}`) );
   }
   
   
