@@ -40,7 +40,16 @@ export class WishService {
   addWish(wish: string) {
     this.wishes$.push({wish: wish})  // 'Hippopotamus'
     .then(
-      () => console.log(`Success '${wish}' added to database.`),
+      () => console.log(`Success. Wish '${wish}' added to database.`),
+      console.error
+    );
+  }
+
+  deleteWish(wishKey: string) {
+    console.log(`wish service deleteWish ${wishKey}`);
+    this.wishes$.remove(wishKey)
+    .then(
+      () => console.log(`Success. Wish '${wishKey}' deleted from database.`),
       console.error
     );
   }

@@ -32,6 +32,11 @@ export class WishListComponent implements OnInit, OnDestroy {
 
   }
   
+  deleteWish(wishKey: string) {
+    console.log(`Deleted wish '${wishKey}'`);
+    this.wishService.deleteWish(wishKey);
+  }
+  
   addWish(wish: string) {
     //console.log(`Added wish '${wish}'`);
     this.wishService.addWish(wish);
