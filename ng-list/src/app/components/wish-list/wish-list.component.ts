@@ -33,7 +33,8 @@ export class WishListComponent implements OnInit, OnDestroy {
   }
   
   addWish(wish: string) {
-    console.log(`Added wish '${wish}'`);
+    //console.log(`Added wish '${wish}'`);
+    this.wishService.addWish(wish);
     
     // this.wishes$.push({wish: wish})  // 'Hippopotamus'
     // .then(
