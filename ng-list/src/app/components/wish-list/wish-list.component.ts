@@ -31,6 +31,17 @@ export class WishListComponent implements OnInit, OnDestroy {
         );
 
   }
+  
+  addWish(wish: string) {
+    console.log(`Added wish '${wish}'`);
+    
+    // this.wishes$.push({wish: wish})  // 'Hippopotamus'
+    // .then(
+    //   () => console.log(`Success '${wish}' added to database.`),
+    //   console.error
+    // );
+  }
+  
 
   ngOnDestroy() {
     // this.subscription.unsubscribe();
