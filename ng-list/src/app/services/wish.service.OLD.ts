@@ -19,9 +19,7 @@ export class WishService {
   constructor(private af: AngularFire) {
     console.log('ctor - wish');
 
-    //this.wishes$ = this.af.database.list('/food-idea/cuisines');
-    this.wishes$ = this.af.database.list('/wishlist');
-    this.wishes$.subscribe(console.log);
+    this.wishes$ = this.af.database.list('/food-idea/cuisines');
   }
 
   // getWishes() : any {
