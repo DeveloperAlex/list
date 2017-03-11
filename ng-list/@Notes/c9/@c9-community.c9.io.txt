@@ -8,3 +8,10 @@ https://community.c9.io/t/anyone-using-c9-to-do-the-angular2-project/7078/12?u=d
 
 
 https://status.c9.io/
+
+
+
+https://community.c9.io/t/can-i-install-rstudio-on-c9/12310/8
+> https://github.com/acabey/cloud9-vnc
+>> Stupidly complex - but hey interesting to see that this can be done.
+
