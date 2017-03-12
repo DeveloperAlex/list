@@ -1,8 +1,8 @@
 <div class="container">
     <div class="col-md-12">
 
-        <h3>Wish List ( {{ wishes?.length }} wishes )</h3>
-        
+        <h3>Wish List ( {{ cuisines?.length }} wishes )</h3>
+
         <div class="row">
             <!--Below is an example of a Template Reference Variable-->
             <!--https://angular.io/docs/ts/latest/guide/template-syntax.html#!#template-reference-variable-->
@@ -14,37 +14,13 @@
         <br/>
         
         <div class="row">
-            <div *ngFor="let w of wishes" class="col-md-12 wishrow">
+            <div *ngFor="let w of wishes" class="row">
                 <!--<span>{{ c.$value }}</span>-->
                 <i (click)="deleteWish(w.$key)" class="fa fa-trash" title="Delete {{w.wish}}"></i>&nbsp;
                 <i (click)="editWish(w.$key, 'updated wish')" class="fa fa-pencil" title="Edit Coming Soon"></i>&nbsp;
-                <span (click)="showEdit(w,true)" *ngIf="!!w.editable">SHOW {{ w.wish }}</span>
-                <span (click)="showEdit(w,false)" *ngIf="!w.editable">EDIT {{ w.wish }} <button (click)="editWish(w.$key, 'updated wish')">Update</button></span>
+                <span>{{ w.wish }}</span>
             </div>
         </div>
-<br/>
-<br/>
-
-<!--<div class="panel panel-default">-->
-<!--  <div class="panel-heading">-->
-<!--    <h3 class="panel-title">Panel title</h3>-->
-<!--  </div>-->
-<!--  <div class="panel-body">-->
-<!--    Panel content-->
-<!--  </div>-->
-<!-- -->
-<!--  <div class="panel-footer"></div>-->
-<!-- -->
-<!--</div>-->
-
-<hr/>
-{{wishes | json}}
-<hr/>
-
-
-<br/>
-
-
 
     </div>
 </div>
