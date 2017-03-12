@@ -17,9 +17,10 @@
             <div *ngFor="let w of wishes" class="col-md-12 wishrow">
                 <!--<span>{{ c.$value }}</span>-->
                 <i (click)="deleteWish(w.$key)" class="fa fa-trash" title="Delete {{w.wish}}"></i>&nbsp;
-                <i (click)="editWish(w.$key, 'updated wish')" class="fa fa-pencil" title="Edit Coming Soon"></i>&nbsp;
-                <span (click)="showEdit(w,true)" *ngIf="!!w.editable">SHOW {{ w.wish }}</span>
-                <span (click)="showEdit(w,false)" *ngIf="!w.editable">EDIT {{ w.wish }} <button (click)="editWish(w.$key, 'updated wish')">Update</button></span>
+                <!--<i (click)="editWish(w.$key, 'updated wish')" class="fa fa-pencil" title="Edit Coming Soon"></i>&nbsp;-->
+                <i (click)="showEdit(w,true)" class="fa fa-pencil" title="Edit {{w.wish}}"></i>&nbsp;
+                <span (click)="showEdit(w,true)" *ngIf="!w.editable">SHOW: {{ w.wish }}</span>
+                <span (click)="showEdit(w,false)" *ngIf="!!w.editable">EDIT: {{ w.wish }} <button (click)="editWish(w.$key, 'updated wish')">Update</button></span>
             </div>
         </div>
 <br/>
