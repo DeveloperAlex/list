@@ -54,8 +54,20 @@ export class WishService {
     );
   }
 
-  updateWish(guid: string, wish: string) {
-    this.af.database.object('/food-idea/cuisines/-guid');  // This should grab the specific item I want to update.
+  updateWish(wishKey: string, wish: any) {
+    //this.af.database.object('/food-idea/cuisines/-guid');  // This should grab the specific item I want to update.
+
+    console.log(`wish service updateWish ${wishKey}`);
+
+//    this.wishes$.update( item: FirebaseOperation, value: Object );
+    
+    this.wishes$.update(wishKey, wish)
+    .then(
+      () => console.log(`Success. Wish '${wishKey}' updated in database.`),
+      console.error
+    );
+
+
   }
 
 

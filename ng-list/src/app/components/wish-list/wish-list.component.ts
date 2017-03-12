@@ -33,9 +33,12 @@ export class WishListComponent implements OnInit, OnDestroy {
   }
 
   // Lecture 18 has updating: https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798910?start=0
-  editWish(wishKey: string) {
+  editWish(wishKey: string, wish: string) {
     console.log(`NOT AVAILABLE YET - Edited wish '${wishKey}'`);
     //this.wishService.deleteWish(wishKey);
+    
+    this.wishService.updateWish(wishKey, {'wish': wish});
+    
   }
   
   

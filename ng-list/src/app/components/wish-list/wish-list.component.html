@@ -17,7 +17,7 @@
             <li *ngFor="let w of wishes">
                 <!--<span>{{ c.$value }}</span>-->
                 <i (click)="deleteWish(w.$key)" class="fa fa-trash" title="Delete {{w.wish}}"></i>&nbsp;
-                <i (click)="editWish(w.$key)" class="fa fa-pencil" title="Edit Coming Soon"></i>&nbsp;
+                <i (click)="editWish(w.$key, 'updated wish')" class="fa fa-pencil" title="Edit Coming Soon"></i>&nbsp;
                 <span>{{ w.wish }}</span>
             </li>
         </ul>
