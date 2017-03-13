@@ -22,6 +22,7 @@ import { NetflixListComponent } from './components/netflix-list/netflix-list.com
 import { CoreService } from './core';
 import { WishService } from './services/wish.service';
 import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 // export const firebaseConfig = {
 //   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
@@ -66,7 +67,8 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     HomeComponent,
     NetflixListComponent,
-    WishListComponent
+    WishListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
