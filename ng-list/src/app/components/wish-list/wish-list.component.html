@@ -24,7 +24,8 @@
                 <span (click)="showEdit(w)" *ngIf="!w.editable">{{w.wish}}</span>
                 <span *ngIf="!!w.editable">
                     <!--<span (click)="showEdit(w,false)" *ngIf="!!w.editable">EDIT: {{ w.wish }} <button (click)="editWish(w.$key, 'updated wish')">Update</button></span>-->
-                    <input type="text" value="{{w.wish}}"/>
+                    <!--<input type="text" value="{{w.wish}}"/>-->
+                    <input type="text" [(ngModel)]="w.wish" />
                     <button (click)="editWish(w, w.$key, 'updated wish')">Update</button>
                     <button (click)="cancelWish(w)">Cancel</button>
                 </span>

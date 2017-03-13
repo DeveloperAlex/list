@@ -49,7 +49,7 @@ export class WishListComponent implements OnInit, OnDestroy {
   editWish(w: any, wishKey: string, wish: string) {
     console.log(`Edited wish '${wishKey}'. New wish= ${w.wish}`);
     //this.wishService.deleteWish(wishKey);
-    
+
     //this.wishService.updateWish(wishKey, {'wish': wish});
     this.wishService.updateWish(wishKey, {'wish': w.wish});
     w.editable = false;
