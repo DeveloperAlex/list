@@ -6,7 +6,7 @@
         <div class="row">
             <!--Below is an example of a Template Reference Variable-->
             <!--https://angular.io/docs/ts/latest/guide/template-syntax.html#!#template-reference-variable-->
-            <input #addwish type="text" autofocus placeholder="Wish to be added" maxlength="50" />
+            <input #addwish type="text" autofocus placeholder="Add a Wish" maxlength="50" />
             <button (click)="addWish(addwish.value);addwish.value='';"
             [ngStyle]="{'cursor':addwish.value?'default':'not-allowed'}"
             [disabled]="!addwish.value" class="btn btn-default">Add Wish</button>

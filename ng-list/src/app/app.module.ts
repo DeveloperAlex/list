@@ -64,9 +64,9 @@ import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    WishListComponent,
+    HomeComponent,
     NetflixListComponent,
-    HomeComponent
+    WishListComponent
   ],
   imports: [
     BrowserModule,
