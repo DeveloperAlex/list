@@ -41,3 +41,12 @@ https://hub.docker.com/
 https://docs.docker.com/docker-for-windows/
 
 
+
+Oracle:
+> https://hub.docker.com/r/sath89/oracle-12c/    // https://hub.docker.com/_/oraclelinux/
+> Oracle Database Express Edition 11g Release 2:
+>> http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html
+> http://www.oracle.com/technetwork/community/developer-vm/index.html  //Virtual Box
+> http://www.orafaq.com/wiki/Oracle_XE
+
+

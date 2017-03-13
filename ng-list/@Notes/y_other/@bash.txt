@@ -7,3 +7,6 @@ lsb_release -a
 > Ubuntu 14.04.3 LTS
 
 
+$ uname -r   // Gives kernel version
+> 4.8.8-c9
+
