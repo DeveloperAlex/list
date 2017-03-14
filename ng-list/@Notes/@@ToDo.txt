@@ -5,6 +5,8 @@ ___ToDo___
 ** Add Form to show I know how to do that.
 ** Add Grid - maybe ag-grid...
 ** Build up Chat program/tab.
+** Hit a true Restful service (since Firebase is actually running on Sockets).
+** Use more Observable commands.
 
 
 
