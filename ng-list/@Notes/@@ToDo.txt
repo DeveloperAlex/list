@@ -1,4 +1,13 @@
 
+___ToDo___
+** Add Spinner (maybe same as work) - when waiting for data to come back. Otherwise use Favorite Icon thingy.
+** Look at Telerik Demo site - add 1 or couple of things similar to what they show off.
+** Add Form to show I know how to do that.
+** Add Grid - maybe ag-grid...
+** Build up Chat program/tab.
+
+
+
 ___Install___
 * https://github.com/ng-bootstrap/ng-bootstrap   // Is this the most popular Bootstrap for ng2/4?  And s/ I use npm or bower to install it??
 >> https://github.com/ng-bootstrap/ng-bootstrap/tree/master/demo/src/app/components   // The ng version seems to have stuff I may want/need.

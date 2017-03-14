@@ -1,29 +1,31 @@
 .plz {
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation-name: plzanimated;
     animation-direction: alternate-reverse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 
-    -moz-animation-name: example;
-    -moz-animation-duration: 4s;
+    -moz-animation-name: plzanimated;
+    -moz-animation-direction: alternate;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
     
-    -webkit-animation-name: example;
-    -webkit-animation-duration: 4s;
-    /*-webkit-anima*/
-    
+    -webkit-animation-name: plzanimated;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
 }
 
-@keyframes example {
+@keyframes plzanimated {
     from {background-color: orange;}
     to {background-color: yellow;}
 }
 
-@-moz-keyframes example {
+@-moz-keyframes plzanimated {
     from {background-color: orange;}
     to {background-color: yellow;}
 }
 
-@-webkit-keyframes example {
+@-webkit-keyframes plzanimated {
     from {background-color: orange;}
     to {background-color: yellow;}
 }
