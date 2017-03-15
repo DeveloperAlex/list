@@ -10,3 +10,16 @@ lsb_release -a
 $ uname -r   // Gives kernel version
 > 4.8.8-c9
 
+
+dpkg -l  // I was told about this during one of those quick messages as c9 is opening.
+> Show all the packages installed.
+
+hostname
+> developeralex-ng2-list-001-4317326
+
+vim = Vi IMproved - enhanced vi editor
+tree
+sudo
+nginx
+man man
+
