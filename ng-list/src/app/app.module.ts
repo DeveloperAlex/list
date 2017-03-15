@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -6,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app.routes';
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from '../environments/firebase.config';  // https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
+import { MaterialModule, MdProgressSpinnerModule } from '@angular/material';
 
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
@@ -58,6 +61,14 @@ import { AboutComponent } from './components/about/about.component';
 //  { path: '**', component: AppComponent }  //Caused doubling of ui (both of these do).
 
 
+// https://plnkr.co/edit/LCsiXOtzSedGZDbGQ3f8?p=preview
+export class MyHammerConfig extends HammerGestureConfig  {
+  overrides = <any>{
+      'swipe': {velocity: 0.4, threshold: 20} // override default settings
+  }
+}
+
+
 // Notes:
 //  declarations = get all of the app's classes decorated w/ @Component. Directives & Pipes must be added to declarations too.
 //  imports = get classes decorated w/ @NgModule.
@@ -79,12 +90,14 @@ import { AboutComponent } from './components/about/about.component';
     HttpModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig[0]),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    MaterialModule, MdProgressSpinnerModule
   ],
   providers: [
     CoreService,
     //SpinnerService,
-    WishService
+    WishService,
+    { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
   ],
   bootstrap: [AppComponent]
 })

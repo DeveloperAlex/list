@@ -36,3 +36,8 @@ nav div.container {
     height: 20px;
     padding-top: 10px;
 }
+
+.spinme {
+    background-color: lime;
+    z-index: 6000000;
+}

@@ -8,6 +8,9 @@ import 'rxjs/add/operator/do';
 //import { CoreService, SpinnerService } from './core';
 import { CoreService } from './core';
 
+
+//import { MaterialModule } from '@angular/material';
+
 // import { AngularFire } from 'angularfire2';
 
 @Component({
@@ -27,7 +30,7 @@ export class AppComponent implements OnInit {  // implements OnInit, OnDestroy {
   
   ngOnInit() {
     
-    debugger;
+    //debugger;
     // this.spinnerService.show();
 
     
