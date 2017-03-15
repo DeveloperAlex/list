@@ -4,7 +4,8 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/do';
 //import 'rxjs/add/operator/interval';
-import { CoreService } from './core/core.service';
+//import { CoreService } from './core/core.service';
+import { CoreService, SpinnerService } from './core';
 
 
 // import { AngularFire } from 'angularfire2';
@@ -20,11 +21,15 @@ export class AppComponent implements OnInit {  // implements OnInit, OnDestroy {
   // cuisines: any;
   // private subscription: any;
 
-  constructor(private titleService: Title, private coreService: CoreService) {
+  constructor(private titleService: Title, private coreService: CoreService, private spinnerService: SpinnerService) {
     console.log('ctor app.component');
   }
   
   ngOnInit() {
+    
+    spinnerService.show();
+
+    
     // this.titleService.setTitle("list.developeralex.com");  // Works https://angular.io/docs/ts/latest/cookbook/set-document-title.html
     
     // var timer$ = Observable.interval(5000);

@@ -19,7 +19,7 @@ import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
 // providers:
-import { CoreService } from './core';
+import { CoreService, SpinnerService } from './core';
 import { WishService } from './services/wish.service';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -82,6 +82,7 @@ import { SpinnerComponent } from './core/spinner/spinner.component';
   ],
   providers: [
     CoreService,
+    SpinnerService,
     WishService
   ],
   bootstrap: [AppComponent]
