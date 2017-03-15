@@ -19,11 +19,12 @@ import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
 // providers:
-import { CoreService, SpinnerService } from './core';
+import { CoreService } from './core';  // SpinnerService
 import { WishService } from './services/wish.service';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { SpinnerComponent } from './core/spinner/spinner.component';
+//import { SpinnerComponent } from './core/spinner/spinner.component';
+//import { SpinnerComponent } from './core';
 
 // export const firebaseConfig = {
 //   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
@@ -69,8 +70,8 @@ import { SpinnerComponent } from './core/spinner/spinner.component';
     HomeComponent,
     NetflixListComponent,
     WishListComponent,
-    AboutComponent,
-    SpinnerComponent
+    AboutComponent
+    //SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +83,7 @@ import { SpinnerComponent } from './core/spinner/spinner.component';
   ],
   providers: [
     CoreService,
-    SpinnerService,
+    //SpinnerService,
     WishService
   ],
   bootstrap: [AppComponent]

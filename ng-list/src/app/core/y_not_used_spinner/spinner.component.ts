@@ -43,6 +43,7 @@ export class SpinnerComponent implements OnInit, OnDestroy {
 
     constructor(private spinnerElement: ElementRef,
                 private spinnerService: SpinnerService) {
+        debugger;  // I don't think this is getting hit.
         this.element = spinnerElement.nativeElement;
     }
 
@@ -52,6 +53,7 @@ export class SpinnerComponent implements OnInit, OnDestroy {
     }
 
     private initSpinner() {
+        debugger;
         let options = {
             lines: this.lines,
             length: this.length,
@@ -76,11 +78,16 @@ export class SpinnerComponent implements OnInit, OnDestroy {
         };
         console.log('Creating spinner with options:');
         console.log(JSON.stringify((options)));
+        debugger;
         this.spinner = new Spinner(options);
+        debugger;
     }
 
     private createServiceSubscription() {
-        this.subscription = this.spinnerService.spinnerObservable.subscribe(show => {
+        debugger;
+        //this.subscription = this.spinnerService.spinnerObservable.subscribe(show => {
+        this.subscription = this.spinnerService.spinnerSubject.subscribe(show => {
+            debugger;
             if (show) {
                 this.startSpinner();
             } else {
@@ -90,16 +97,21 @@ export class SpinnerComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
+        debugger;
         this.subscription.unsubscribe();
     }
 
     startSpinner() {
+        debugger;
         this.show = true;
         this.spinner.spin(this.element.firstChild);
+        debugger;
     }
 
     stopSpinner() {
+        debugger;
         this.show = false;
         this.spinner.stop();
+        debugger;
     }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AngularFire } from 'angularfire2';
-import { WishService } from '../../services/wish.service';
+//import { WishService } from '../../services/wish.service';
+import { WishService } from '../../services';
 
 @Component({
   selector: 'da-wish-list',

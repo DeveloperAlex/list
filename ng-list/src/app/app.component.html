@@ -2,15 +2,15 @@
     <div class="container">
         <div class="nav navbar-header navbar-left navbar-brand">Lots of Lists App</div>
         <ul class="nav navbar-left nav-pills">
-            <li class="active" data-toggle="pill" routerLink="/" routerLinkActive="route-selected" [routerLinkActiveOptions]="{exact:true}"><a>Home</a></li>
+            <li class="active" data-toggle="pill" routerLink="/home" routerLinkActive="route-selected" [routerLinkActiveOptions]="{exact:true}"><a>Home</a></li>
             <!--<li class="active"><a ui-sref="logoutAuth0">Logout</a></li>-->
             <!--<li ng-hide="true"><a ui-sref="user({ username: 'bob' })">user bob</a></li>-->
             <!--<li ng-hide="true" ng-click="app.orderClicked = !app.orderClicked;" ng-class="{'active':app.orderClicked}"><a ui-sref="order">Order</a></li>-->
             <li data-toggle="pill" style="color: #0daef8; padding: 10px 15px">{{title}}</li>
         </ul>
         <ul class="nav navbar-right nav-pills">
-            <li class="active" data-toggle="pill" routerLink="/netflixlist" routerLinkActive="route-selected"><a>Netflix List</a></li>
             <li class="active" data-toggle="pill" routerLink="/wishlist" routerLinkActive="route-selected"><a>Wish List</a></li>
+            <li class="active" data-toggle="pill" routerLink="/netflixlist" routerLinkActive="route-selected"><a>Netflix List</a></li>
             <li class="active" data-toggle="pill" routerLink="/chat" routerLinkActive="route-selected"><a>Group Chat</a></li>
             
             <!--<li ng-hide="true"><a ui-sref="loginPassport"><i class="fa fa-user"></i>Login Passport</a></li>-->
@@ -60,7 +60,7 @@
             <br />
             <br />
             <alert type="success" dismissOnTimeout="5000" dismissible="true">Welcome to Many Lists app - Check out Wish List</alert>
-            spin <div da-spinner></div> ner
+            <!--<div da-spinner></div>-->
         </div>
     </div>
 </div>
