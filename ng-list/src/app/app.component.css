@@ -47,7 +47,19 @@ nav div.container {
     padding-top: 10px;
 }
 
-.spinme {
-    background-color: lime;
-    z-index: 6000000;
-}
+/*.spinme {*/
+/*    background-color: pink;*/
+/*    z-index: 6000000;*/
+/*}*/
+
+
+/*.spinme {*/
+/*    border-color: red !important;*/
+/*    border-width: 4px !important;*/
+/*    background-color: lime;*/
+/*    z-index: 6000000;*/
+/*}*/
+/*svg, path {*/
+/*    stroke: blue !important;*/
+/*    stroke-width: 10px !important;*/
+/*}*/
