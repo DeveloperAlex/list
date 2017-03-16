@@ -1,4 +1,10 @@
 key (to search for): Dockerfile
+Microservices
+> https://devcenter.heroku.com/articles/dynos
+> Netflix - big, big, big in microservices!!
+>> https://www.nginx.com/blog/microservices-at-netflix-architectural-best-practices/
+>>> Deploy in Containers: Deploying microservices in containers is important because it means you just need just one tool to deploy everything. As long as the microservice is in a container, the tool knows how to deploy it. It doesn’t matter what the container is. 
+>>> That said, Docker seems very quickly to have become the de facto standard for containers.
 
 
 Try:

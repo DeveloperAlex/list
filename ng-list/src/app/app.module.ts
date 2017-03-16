@@ -26,6 +26,7 @@ import { CoreService } from './core';  // SpinnerService
 import { WishService } from './services/wish.service';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { DockerComponent } from './components/docker/docker.component';
 //import { SpinnerComponent } from './core/spinner/spinner.component';
 //import { SpinnerComponent } from './core';
 
@@ -81,7 +82,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     HomeComponent,
     NetflixListComponent,
     WishListComponent,
-    AboutComponent
+    AboutComponent,
+    DockerComponent
     //SpinnerComponent
   ],
   imports: [

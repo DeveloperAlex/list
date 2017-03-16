@@ -1,4 +1,11 @@
 
 css3 effects:
   http://ianlunn.github.io/Hover/
+  https://codepen.io/nxworld/pen/ZYNOBZ
+  https://codepen.io/Calloumi/pen/vndlH   // top bar derived from this example.
 
+
+Spinner:
+  http://spin.js.org/  // us-spinner uses this internally.
+  
+  
