@@ -2,6 +2,9 @@
 ___ToDo___
 ** Add Spinner (maybe same as work) - when waiting for data to come back. Otherwise use Favorite Icon thingy.
 >>> https://github.com/seanlmcgill/ng2spin/tree/master/app/spinner
+>>> https://material.angular.io/components/component/progress-spinner
+
+
 
 ** Look at Telerik Demo site - add 1 or couple of things similar to what they show off.
 ** Add Form to show I know how to do that.
