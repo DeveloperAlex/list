@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { SpinnerService } from './';
 
 @Component({
   selector: 'da-spinner',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpinnerComponent implements OnInit {
 
+  // https://angular.io/docs/ts/latest/cookbook/component-communication.html
+  @Output() spinning = new EventEmitter<boolean>();;
+
   constructor() { }
 
   ngOnInit() {
   }
+  
+  
 
 }

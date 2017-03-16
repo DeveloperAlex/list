@@ -1,15 +1,46 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
+//import { Subscription } from 'rxjs/Rx';
 
 @Injectable()
 export class SpinnerService {
   private spinArray: string[];
   public spinning: boolean;  // TODO: Change this to a Property Getter instead (check TypescriptLang.org how).
+  
+  private spinnerObserver: Observer<boolean>;
+  public spinnerObservable: Observable<boolean>;  // TODO: Component needs to subscribe to this!!
+  //private subscription: Subscription = null;
+
 
   constructor() { 
     this.spinning = false;
     this.spinArray = new Array<string>();
+    this.setupSpinnerObservable();
   }
+  
+  // ngOnInit() {
+  // //this.initSpinner();
+  // //this.createServiceSubscription();
+  // this.
+  // }
+  //
+  // ngOnDestroy() {
+  //   //debugger;
+  //   this.subscription.unsubscribe();
+  // }
 
+
+  
+  //getSpinner(): Observable<boolean> {
+  //return this.spinnerObservable;
+  setupSpinnerObservable() {
+    this.spinnerObservable = new Observable<boolean>(observer => {
+            this.spinnerObserver = observer;
+        }
+    ).share(); 
+  }
+  
   spin(spinText: string) {
     if (!spinText) return;
     
@@ -18,6 +49,9 @@ export class SpinnerService {
     }
 
     this.spinning = true;
+    if (this.spinnerObserver) {
+      this.spinnerObserver.next(true);
+    }
   }
   
   stop(spinText: string) {
@@ -30,6 +64,9 @@ export class SpinnerService {
     
     if (this.spinArray.length === 0) {
       this.spinning = false;
+      if (this.spinnerObserver) {
+          this.spinnerObserver.next(false);
+      }    
     }
   }
 
