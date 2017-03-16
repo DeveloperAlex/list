@@ -1,0 +1,6 @@
+# docker-compose up = uses this file to know what containers to spin up.
+#   And how the docker containers will talk with one another.
+#
+# Links:
+#  https://docs.docker.com/compose/compose-file/compose-versioning/#version-3
+#  https://docs.docker.com/compose/reference/
