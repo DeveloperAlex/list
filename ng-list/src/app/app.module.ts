@@ -22,13 +22,13 @@ import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
 // providers:
-import { CoreService } from './core';  // SpinnerService
+import { CoreService, SpinnerService } from './core';
 import { WishService } from './services/wish.service';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { DockerComponent } from './components/docker/docker.component';
 //import { SpinnerComponent } from './core/spinner/spinner.component';
-//import { SpinnerComponent } from './core';
+import { SpinnerComponent } from './core';
 
 // export const firebaseConfig = {
 //   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
@@ -83,7 +83,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     NetflixListComponent,
     WishListComponent,
     AboutComponent,
-    DockerComponent
+    DockerComponent,
+    SpinnerComponent
     //SpinnerComponent
   ],
   imports: [
@@ -97,7 +98,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
   ],
   providers: [
     CoreService,
-    //SpinnerService,
+    SpinnerService,
     WishService,
     { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
   ],
