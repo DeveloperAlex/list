@@ -47,11 +47,17 @@ nav div.container {
     padding-top: 10px;
 }
 
+
+.spinme {
+    position: absolute;
+    left: 45%;
+    top: 200px;
+}
+
 /*.spinme {*/
 /*    background-color: pink;*/
 /*    z-index: 6000000;*/
 /*}*/
-
 
 /*.spinme {*/
 /*    border-color: red !important;*/
