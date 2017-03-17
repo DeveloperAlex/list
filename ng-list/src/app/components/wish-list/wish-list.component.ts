@@ -47,6 +47,7 @@ export class WishListComponent implements OnInit, OnDestroy {
   }
   
   ngOnDestroy() {
+    console.log(`WishListComponent::ngOnDestroy()`);
     this.subscription.unsubscribe();
     this.spinnerService.stop('wishlist');
   }

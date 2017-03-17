@@ -41,7 +41,7 @@ export class SpinnerService {
   }
   
   stop(spinText: string) {
-    console.log(`spin(${spinText})`);
+    console.log(`stop(${spinText})`);
     //debugger;
     if (!spinText) return;
 

@@ -27,6 +27,7 @@ export class NetflixListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    console.log(`NetflixListComponent::ngOnDestroy()`);
     this.subscription.unsubscribe();
     this.spinnerService.stop('netflixlist');
   }
