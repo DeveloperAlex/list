@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit, OnDestroy } from '@angular/core';
 import { SpinnerService } from './';
-import { Subscription, Subject } from 'rxjs/Rx';
+import { Subscription } from 'rxjs/Rx';
 
 
 @Component({
@@ -11,9 +11,7 @@ import { Subscription, Subject } from 'rxjs/Rx';
 export class SpinnerComponent implements OnInit, OnDestroy {
 
   // https://angular.io/docs/ts/latest/cookbook/component-communication.html
-  //@Output() spinning = new EventEmitter<boolean>();
-  @Input() spinning: boolean;
-
+  @Output() spinning = new EventEmitter<boolean>();;
   private subscription: Subscription = null;
   
   constructor(private spinnerService: SpinnerService) {
@@ -22,7 +20,6 @@ export class SpinnerComponent implements OnInit, OnDestroy {
 
   private _startStop: boolean = false;
   startStop() {
-    console.log(`startStop() - this._startStop = ${this._startStop}`);
     if (this._startStop) {
       this.spinnerService.spin('testing');
     } else {
@@ -31,26 +28,23 @@ export class SpinnerComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log(`ngOnInit()`);
     //this.initSpinner();
     this.createSpinnerSubscription();
   }
   
   ngOnDestroy() {
-    console.log(`ngOnDestroy()`);
     this.subscription.unsubscribe();
   }
 
 
   createSpinnerSubscription() {
-    console.log(`createSpinnerSubscription()`);
     //debugger;
     
     this.subscription = this.spinnerService.spinnerObservable
       .subscribe(showSpinner => {
-        debugger;
-        //this.spinning.emit(showSpinner);
-        this.spinning = showSpinner;
+        if (showSpinner){
+          this.spinning.emit(showSpinner);
+        }
       });
 
     //debugger;

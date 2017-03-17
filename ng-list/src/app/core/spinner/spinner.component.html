@@ -4,6 +4,12 @@
 
 
 <button type="button" (click)="startStop()">Click Me!</button>
+<div *ngIf="spinning">
+  spinning = true
+</div>
+<div *ngIf="!spinning">
+  spinning = false
+</div>
 <div class="spinme" *ngIf="spinning">
   <md-spinner></md-spinner>
 </div>
