@@ -1,3 +1,4 @@
+/*
 import { Component, EventEmitter, Output, OnInit, OnDestroy } from '@angular/core';
 import { SpinnerService } from './';
 import { Subscription } from 'rxjs/Rx';
@@ -54,3 +55,5 @@ export class SpinnerComponent implements OnInit, OnDestroy {
 
 
 }
+
+*/

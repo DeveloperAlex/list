@@ -1,3 +1,4 @@
+/*
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
@@ -63,3 +64,5 @@ export class SpinnerService {
 // https://material.angular.io/components/component/progress-spinner
 // usSpinnerService.spin('deleteSpinner');
 // usSpinnerService.stop('deleteSpinner');
+
+*/
