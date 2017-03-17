@@ -20,8 +20,9 @@ export class SpinnerComponent implements OnInit, OnDestroy {
     console.log(`SpinnerComponent ctor`);
   }
 
-  private _startStop: boolean = false;
+  private _startStop: boolean = true;
   startStop() {
+    this._startStop = !this._startStop;
     console.log(`startStop() - this._startStop = ${this._startStop}`);
     if (this._startStop) {
       this.spinnerService.spin('testing');
