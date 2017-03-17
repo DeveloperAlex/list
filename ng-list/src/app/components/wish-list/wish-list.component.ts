@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AngularFire } from 'angularfire2';
 //import { WishService } from '../../services/wish.service';
 import { WishService } from '../../services';
-//import ( SpinnerService ) from '../../core';
+import { SpinnerService } from '../../core';
 
 @Component({
   selector: 'da-wish-list',
@@ -13,9 +13,10 @@ export class WishListComponent implements OnInit, OnDestroy {
   wishes: Object[];
   // private subscription: any;
 
-  //constructor(private af: AngularFire, private wishService: WishService, private spinnerService: SpinnerService) {
-  constructor(private af: AngularFire, private wishService: WishService) {
+  //constructor(private af: AngularFire, private wishService: WishService) {
+  constructor(private af: AngularFire, private wishService: WishService, private spinnerService: SpinnerService) {
     console.log('ctor - wishlist');
+    console.log(`spinnerService=`, spinnerService);
   }
 
   ngOnInit() {
@@ -28,21 +29,21 @@ export class WishListComponent implements OnInit, OnDestroy {
 
     // this.cuisines = this.wishService.getWishes();  //Return a promise maybe? Since its not an Observable yet.
     
-    //this.spinnerService.spin('wishlist');
-    this.wishService.getWishesSubscription()
-      .do(console.log)
-      
-      .subscribe(
-        x => this.wishes = x
-      )
-      
-      // .do(this.spinnerService.stop('wishlist'));
-      
-      // .subscribe(x => { 
-      //   this.wishes = x;
-      //   this.spinnerService.stop('wishlist');
-      // })
-    ;
+    this.spinnerService.spin('wishlist');
+    setTimeout(()=> {
+      this.wishService.getWishesSubscription()
+        .do(console.log)
+        .subscribe(x => { 
+          this.wishes = x;
+          this.spinnerService.stop('wishlist');
+        })
+      ;
+    }, 1000);  // Show off Spinner.
+    
+    // .subscribe(
+    //   x => this.wishes = x
+    // )
+    // .do(this.spinnerService.stop('wishlist'));
   }
   
   testing() {
