@@ -14,9 +14,18 @@ export class SpinnerComponent implements OnInit, OnDestroy {
   @Output() spinning = new EventEmitter<boolean>();;
   private subscription: Subscription = null;
   
-  constructor(private spinnerService: SpinnerService) { 
+  constructor(private spinnerService: SpinnerService) {
+    console.log(`SpinnerComponent ctor`);
   }
 
+  private _startStop: boolean = false;
+  startStop() {
+    if (this._startStop) {
+      this.spinnerService.spin('testing');
+    } else {
+      this.spinnerService.stop('testing');
+    }
+  }
 
   ngOnInit() {
     //this.initSpinner();
@@ -29,22 +38,16 @@ export class SpinnerComponent implements OnInit, OnDestroy {
 
 
   createSpinnerSubscription() {
-        //     //this.subscription = this.spinnerService.spinnerObservable.subscribe(show => {
-        // this.subscription = this.spinnerService.spinnerSubject.subscribe(show => {
-        //     debugger;
-        //     if (show) {
-        //         this.startSpinner();
-        //     } else {
-        //         this.stopSpinner();
-        //     }
-        // });
-        
+    //debugger;
+    
     this.subscription = this.spinnerService.spinnerObservable
       .subscribe(showSpinner => {
         if (showSpinner){
           this.spinning.emit(showSpinner);
         }
       });
+
+    //debugger;
       
   }
   

@@ -3,9 +3,9 @@
 <!--</p>-->
 
 
-
-<div class="spinme" *ngIf="true">
-    <md-spinner></md-spinner>
+<button type="button" (click)="startStop()">Click Me!</button>
+<div class="spinme" *ngIf="spinning">
+  <md-spinner></md-spinner>
 </div>
 
 <!--<da-spinner></da-spinner>-->

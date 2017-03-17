@@ -12,7 +12,8 @@ export class SpinnerService {
   public spinnerObservable: Observable<boolean>;  // TODO: Component needs to subscribe to this!!
 
 
-  constructor() { 
+  constructor() {
+    console.log(`SpinnerService ctor`);
     this.spinning = false;
     this.spinArray = new Array<string>();
     this.createSpinnerObservable();
