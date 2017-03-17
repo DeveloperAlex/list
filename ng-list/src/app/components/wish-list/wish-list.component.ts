@@ -11,12 +11,12 @@ import { SpinnerService } from '../../core';
 })
 export class WishListComponent implements OnInit, OnDestroy {
   wishes: Object[];
-  // private subscription: any;
+  private subscription: any;
 
   //constructor(private af: AngularFire, private wishService: WishService) {
   constructor(private af: AngularFire, private wishService: WishService, private spinnerService: SpinnerService) {
     console.log('ctor - wishlist');
-    console.log(`spinnerService=`, spinnerService);
+    //console.log(`spinnerService=`, spinnerService);
   }
 
   ngOnInit() {
@@ -30,15 +30,15 @@ export class WishListComponent implements OnInit, OnDestroy {
     // this.cuisines = this.wishService.getWishes();  //Return a promise maybe? Since its not an Observable yet.
     
     this.spinnerService.spin('wishlist');
-    setTimeout(()=> {
-      this.wishService.getWishesSubscription()
-        .do(console.log)
-        .subscribe(x => { 
-          this.wishes = x;
-          this.spinnerService.stop('wishlist');
-        })
-      ;
-    }, 1000);  // Show off Spinner.
+    //setTimeout(()=> {
+    this.subscription = this.wishService.getWishesSubscription()
+      .do(console.log)
+      .subscribe(x => { 
+        this.wishes = x;
+        this.spinnerService.stop('wishlist');
+      })
+    ;
+    //}, 1000);  // Show off Spinner.
     
     // .subscribe(
     //   x => this.wishes = x
@@ -46,9 +46,14 @@ export class WishListComponent implements OnInit, OnDestroy {
     // .do(this.spinnerService.stop('wishlist'));
   }
   
-  testing() {
-    console.log('testing 123');
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+    this.spinnerService.stop('wishlist');
   }
+
+  // testing() {
+  //   console.log('testing 123');
+  // }
   
   showEdit(w: any) {
     w.editable = true;
@@ -68,8 +73,7 @@ export class WishListComponent implements OnInit, OnDestroy {
     this.wishService.updateWish(wishKey, {'wish': w.wish});
     w.editable = false;
   }
-  
-  
+
   deleteWish(wishKey: string) {
     console.log(`Deleted wish '${wishKey}'`);
     this.wishService.deleteWish(wishKey);
@@ -86,9 +90,4 @@ export class WishListComponent implements OnInit, OnDestroy {
     // );
   }
   
-
-  ngOnDestroy() {
-    // this.subscription.unsubscribe();
-  }
-
 }
