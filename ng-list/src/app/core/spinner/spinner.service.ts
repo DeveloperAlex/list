@@ -10,31 +10,18 @@ export class SpinnerService {
   
   private spinnerObserver: Observer<boolean>;
   public spinnerObservable: Observable<boolean>;  // TODO: Component needs to subscribe to this!!
-  //private subscription: Subscription = null;
 
 
   constructor() { 
     this.spinning = false;
     this.spinArray = new Array<string>();
-    this.setupSpinnerObservable();
+    this.createSpinnerObservable();
   }
   
-  // ngOnInit() {
-  // //this.initSpinner();
-  // //this.createServiceSubscription();
-  // this.
-  // }
-  //
-  // ngOnDestroy() {
-  //   //debugger;
-  //   this.subscription.unsubscribe();
-  // }
-
-
   
   //getSpinner(): Observable<boolean> {
   //return this.spinnerObservable;
-  setupSpinnerObservable() {
+  createSpinnerObservable() {
     this.spinnerObservable = new Observable<boolean>(observer => {
             this.spinnerObserver = observer;
         }
