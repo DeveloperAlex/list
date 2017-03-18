@@ -1,4 +1,11 @@
 
+sudo -i
+> whoami --> root
+> exit    // Says 'logout' whenever I type 'exit'.
+> whoami --> ubuntu
+>> su - postgres  // To switch to another user.
+
+
 du-c9 | sort -h
 > Shows what files are consuming the most disk space.
 

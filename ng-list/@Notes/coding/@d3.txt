@@ -1,0 +1,7 @@
+
+* Look up nvd3 thingy I used at AIG.  I'm gonna want that code.
+
+Links for possible ng2 D3 directive/thingy:
+- https://www.npmjs.com/package/ng2-nvd3
+
+

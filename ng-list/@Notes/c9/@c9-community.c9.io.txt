@@ -1,4 +1,13 @@
 
+Plug-in's:
+https://community.c9.io/t/plugin-packages-for-cloud9/2210
+> https://github.com/shadowcodex/c9.ide.desktop
+
+
+MongoDb:
+- https://community.c9.io/t/setting-up-mongodb/1717
+
+
 https://community.c9.io/t/angular-cli/14089
 
 My Big Answer:
