@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { D3Service } from '../';
 
 @Component({
   selector: 'da-d3',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class D3Component implements OnInit {
 
-  constructor() { }
+  constructor(private d3Service: D3Service) { }
 
   ngOnInit() {
   }

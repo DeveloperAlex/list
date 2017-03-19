@@ -21,6 +21,8 @@ import { AppComponent } from './app.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
 
+import { D3Service } from './components/';
+
 // providers:
 import { CoreService, SpinnerService } from './core';
 import { WishService } from './services/wish.service';
