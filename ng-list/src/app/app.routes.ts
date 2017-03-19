@@ -2,10 +2,11 @@
 //  https://github.com/angular-university/angular-firebase-app/blob/master/src/app/router.config.ts
 
 import { Routes } from '@angular/router';
-import { AboutComponent, DockerComponent, HomeComponent, NetflixListComponent, WishListComponent } from './components/index';
+import { AboutComponent, D3Component, DockerComponent, HomeComponent, NetflixListComponent, WishListComponent } from './components/index';
 
 export const routes: Routes = [
   { path: 'about',       component: AboutComponent },
+  { path: 'd3',          component: D3Component },
   { path: 'docker',      component: DockerComponent },
   { path: 'home',        component: HomeComponent },
   { path: 'netflixlist', component: NetflixListComponent },

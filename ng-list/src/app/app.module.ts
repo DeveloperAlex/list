@@ -29,6 +29,7 @@ import { AboutComponent } from './components/about/about.component';
 import { DockerComponent } from './components/docker/docker.component';
 //import { SpinnerComponent } from './core/spinner/spinner.component';
 import { SpinnerComponent } from './core';
+import { D3Component } from './components/d3/d3.component';
 
 // export const firebaseConfig = {
 //   apiKey: "AIzaSyBDQ0nM2cJFSYmHbYPx4j90-RacHnYA5PU",
@@ -84,7 +85,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     WishListComponent,
     AboutComponent,
     DockerComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    D3Component
     //SpinnerComponent
   ],
   imports: [
