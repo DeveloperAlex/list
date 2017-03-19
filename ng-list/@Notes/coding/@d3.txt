@@ -5,3 +5,8 @@ Links for possible ng2 D3 directive/thingy:
 - https://www.npmjs.com/package/ng2-nvd3
 
 
+"d3": "3.5.17",
+"nvd3": "1.8.4",
+"angular-nvd3": "1.0.8",
+
+"ag-grid-enterprise": "7.2.4"
