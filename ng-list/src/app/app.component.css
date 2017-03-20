@@ -18,7 +18,6 @@
     color: #404040;
     text-decoration: none;
     background-color: yellow !important;
-    /* background-color: #337ab7 !important; #33a6b7 */
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-left-radius: 4px;
@@ -37,7 +36,6 @@ li.active {
 
 nav div.container {
     padding-top: 5px;
-    /*line-height: 25px;*/
     line-height: 20px;
 }
 
@@ -46,26 +44,3 @@ nav div.container {
     height: 20px;
     padding-top: 10px;
 }
-
-
-/*.spinme {*/
-/*    position: absolute;*/
-/*    left: 45%;*/
-/*    top: 200px;*/
-/*}*/
-
-/*.spinme {*/
-/*    background-color: pink;*/
-/*    z-index: 6000000;*/
-/*}*/
-
-/*.spinme {*/
-/*    border-color: red !important;*/
-/*    border-width: 4px !important;*/
-/*    background-color: lime;*/
-/*    z-index: 6000000;*/
-/*}*/
-/*svg, path {*/
-/*    stroke: blue !important;*/
-/*    stroke-width: 10px !important;*/
-/*}*/

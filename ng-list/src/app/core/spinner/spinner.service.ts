@@ -1,21 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 import { Subject } from 'rxjs/Subject';
 //import { Subscription } from 'rxjs/Rx';
 
 @Injectable()
-export class SpinnerService {
+export class SpinnerService implements OnInit, OnDestroy {
   private spinnerSubject = new Subject<boolean>();
   private spinArray: string[];
   private spinning: boolean = false;
   
   constructor() {
     //console.log(`SpinnerService ctor`);
-    //this.spinning = false;
     this.spinArray = new Array<string>();
   }
   
+  ngOnInit() {
+  }
+  
+  ngOnDestroy() {
+  }
+
   get spinnerObservable(): Observable<boolean> {
     //console.log(`spinnerObservable()`);
     return this.spinnerSubject.asObservable();

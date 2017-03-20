@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit, OnDestroy } from '@angular/core';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 // import 'rxjs/Rx';  //Works (ie, doesn't complain about this line).
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Rx';  // Works.
 import { Wish } from '../models/wish';
 
 @Injectable()
-export class WishService {
+export class WishService implements OnInit, OnDestroy {
   cuisines: any;
   private subscription: any;
 
@@ -18,10 +18,14 @@ export class WishService {
 
   constructor(private af: AngularFire) {
     console.log('ctor - wish');
-
-    //this.wishes$ = this.af.database.list('/food-idea/cuisines');
     this.wishes$ = this.af.database.list('/wishlist');
     this.wishes$.subscribe(console.log);
+  }
+  
+  ngOnInit() {
+  }
+  
+  ngOnDestroy() {
   }
 
   // https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0

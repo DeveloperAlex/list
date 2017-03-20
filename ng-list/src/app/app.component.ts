@@ -20,20 +20,13 @@ import { CoreService } from './core';
 })
 export class AppComponent implements OnInit {  // implements OnInit, OnDestroy {
   title = 'Many Lists';
-  // items = ['one', 'two', 'three'];
-  // cuisines: any;
-  // private subscription: any;
 
   constructor(private titleService: Title, private coreService: CoreService) {  // private spinnerService: SpinnerService
     console.log('ctor app.component');
   }
   
   ngOnInit() {
-    
-    //debugger;
-    // this.spinnerService.show();
 
-    
     // this.titleService.setTitle("list.developeralex.com");  // Works https://angular.io/docs/ts/latest/cookbook/set-document-title.html
     
     // var timer$ = Observable.interval(5000);
@@ -70,25 +63,5 @@ export class AppComponent implements OnInit {  // implements OnInit, OnDestroy {
     // numbers.subscribe(x => console.log(x));
     // //numbers.subscribe(x => this.coreService.setTitle(`title ${x}`) );
   }
-  
-  
-  
-
-  // constructor(private af: AngularFire) {
-  //   console.log('ctor app.component');
-  // }
-  //
-  // ngOnInit() {
-  //   console.log(this.af);
-  //   this.subscription = this.af.database.list('/food-idea/cuisines')
-  //   .subscribe(x => {
-  //     this.cuisines = x;
-  //     console.log(this.cuisines);
-  //   });
-  // }
-  //
-  // ngOnDestroy() {
-  //   this.subscription.unsubscribe();
-  // }
 
 }
