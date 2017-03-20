@@ -11,3 +11,26 @@ Test Sites:
 - https://circleci.com/pricing/   // Free for 1 tiny account (1500 minutes per month).
 - https://saucelabs.com/   // Expensive
 
+
+npm install -g phantomjs
+> phantomjs -h
+> phantomjs --version
+> http://phantomjs.org/api/command-line.html
+
+
+http://stackoverflow.com/questions/21611434/what-exactly-does-the-phantomjs-option-web-security-false-turn-off
+> So, it (--web-security=no) is only used for granting access to all origins, and thus only for allowing cross-domain XHR.
+
+
+===================
+https://karma-runner.github.io/0.13/config/configuration-file.html
+> /ng-list/src/test.ts
+> /ng-list/karma.conf.js
+          module.exports = function (config) {
+            config.set({
+              webSecurityEnabled: false,
+              basePath: '',
+
+
+
+

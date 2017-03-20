@@ -3,6 +3,7 @@
 
 module.exports = function (config) {
   config.set({
+    webSecurityEnabled: false,
     basePath: '',
     frameworks: ['jasmine', '@angular/cli'],
     plugins: [
@@ -39,6 +40,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: false
+    singleRun: true
   });
 };
