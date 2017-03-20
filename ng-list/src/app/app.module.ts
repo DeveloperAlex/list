@@ -102,6 +102,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
   ],
   providers: [
     CoreService,
+    D3Service,
     SpinnerService,
     WishService,
     { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
