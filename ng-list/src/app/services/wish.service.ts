@@ -12,12 +12,11 @@ import { Wish } from '../models/wish';
 export class WishService implements OnInit, OnDestroy {
   cuisines: any;
   private subscription: any;
-
   wishes$: FirebaseListObservable<any>;
   wish$: FirebaseObjectObservable<any>; // Lecture 16 shows how to Add a wish: https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798906?start=0
 
   constructor(private af: AngularFire) {
-    console.log('ctor - wish');
+    console.log('ctor - wish (this is being called early because the WishService is referenced in app.module.ts (maybe move to wish-list.component.ts)).');
     this.wishes$ = this.af.database.list('/wishlist');
     this.wishes$.subscribe(console.log);
   }
@@ -46,7 +45,7 @@ export class WishService implements OnInit, OnDestroy {
   }
 
   deleteWish(wishKey: string) {
-    console.log(`wish service deleteWish ${wishKey}`);
+    //console.log(`wish service deleteWish ${wishKey}`);
     this.wishes$.remove(wishKey)
     .then(
       () => console.log(`Success. Wish '${wishKey}' deleted from database.`),
@@ -55,19 +54,15 @@ export class WishService implements OnInit, OnDestroy {
   }
 
   updateWish(wishKey: string, wish: any) {
-    //this.af.database.object('/food-idea/cuisines/-guid');  // This should grab the specific item I want to update.
+    // this.af.database.object('/food-idea/cuisines/-guid');  // This should grab the specific item I want to update.
+    // console.log(`wish service updateWish ${wishKey}`);
 
-    console.log(`wish service updateWish ${wishKey}`);
-
-//    this.wishes$.update( item: FirebaseOperation, value: Object );
-    
+    // this.wishes$.update( item: FirebaseOperation, value: Object );
     this.wishes$.update(wishKey, wish)
     .then(
       () => console.log(`Success. Wish '${wishKey}' updated in database.`),
       console.error
     );
-
-
   }
 
 
@@ -85,6 +80,5 @@ export class WishService implements OnInit, OnDestroy {
   //     return this.cuisines;  //Next make this return an Observable (instead).
   //   });
   // }
-
 
 }

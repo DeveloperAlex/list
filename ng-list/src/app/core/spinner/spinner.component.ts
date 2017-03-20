@@ -14,13 +14,13 @@ export class SpinnerComponent implements OnInit, OnDestroy {
   private subscription: Subscription = null;
   
   constructor(private spinnerService: SpinnerService) {
-    //console.log(`SpinnerComponent ctor`);
+    // console.log(`SpinnerComponent ctor`);
   }
 
   private _startStop: boolean = true;
   startStop() {
     this._startStop = !this._startStop;
-    //console.log(`startStop() - this._startStop = ${this._startStop}`);
+    // console.log(`startStop() - this._startStop = ${this._startStop}`);
     if (this._startStop) {
       this.spinnerService.spin('testing');
     } else {
@@ -29,8 +29,6 @@ export class SpinnerComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    //console.log(`ngOnInit()`);
-    //this.initSpinner();
     this.createSpinnerSubscription();
   }
   
@@ -40,9 +38,7 @@ export class SpinnerComponent implements OnInit, OnDestroy {
   }
 
   createSpinnerSubscription() {
-    //console.log(`createSpinnerSubscription()`);
-    //debugger;
-    
+    // debugger;
     this.subscription = this.spinnerService.spinnerObservable
       .subscribe(showSpinner => {
         this.spinning = showSpinner;

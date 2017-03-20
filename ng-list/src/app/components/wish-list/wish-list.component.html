@@ -16,48 +16,25 @@
         <div class="row">
             <div *ngFor="let w of wishes" class="col-md-12 wishrow">
                 
-                <!--<span>{{ c.$value }}</span>-->
                 <i (click)="deleteWish(w.$key)" class="fa fa-trash" title="Delete {{w.wish}}"></i>&nbsp;
-                <!--<i (click)="editWish(w.$key, 'updated wish')" class="fa fa-pencil" title="Edit Coming Soon"></i>&nbsp;-->
                 <i (click)="showEdit(w)" class="fa fa-pencil" title="Edit {{w.wish}}"></i>&nbsp;
                 
                 <span (click)="showEdit(w)" *ngIf="!w.editable">{{w.wish}}</span>
                 <span *ngIf="!!w.editable">
-                    <!--<span (click)="showEdit(w,false)" *ngIf="!!w.editable">EDIT: {{ w.wish }} <button (click)="editWish(w.$key, 'updated wish')">Update</button></span>-->
-                    <!--<input type="text" value="{{w.wish}}"/>-->
                     <input type="text" [(ngModel)]="w.wish" />
                     <button (click)="editWish(w, w.$key, 'updated wish')">Update</button>
                     <button (click)="cancelWish(w)">Cancel</button>
                 </span>
 
-<!--<input #addwish type="text" autofocus placeholder="Wish to be added" maxlength="50" />-->
-<!--L27 *ngIf="!!w.editable"-->
-
             </div>
         </div>
-<br/>
-<br/>
-
-<!--<div class="panel panel-default">-->
-<!--  <div class="panel-heading">-->
-<!--    <h3 class="panel-title">Panel title</h3>-->
-<!--  </div>-->
-<!--  <div class="panel-body">-->
-<!--    Panel content-->
-<!--  </div>-->
-<!-- -->
-<!--  <div class="panel-footer"></div>-->
-<!-- -->
-<!--</div>-->
-
-<hr/>
-{{wishes | json}}
-<hr/>
-
-
-<br/>
-
-
+        
+        <br/>
+        <br/>
+        <hr/>
+        {{wishes | json}}
+        <hr/>
+        <br/>
 
     </div>
 </div>

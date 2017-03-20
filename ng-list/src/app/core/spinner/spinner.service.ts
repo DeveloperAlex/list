@@ -27,13 +27,13 @@ export class SpinnerService implements OnInit, OnDestroy {
   }
   
   private sendMessage(message: boolean) {
-    console.log(`sendMessage(${message})`);
+    //console.log(`sendMessage(${message})`);
     //debugger;
     this.spinnerSubject.next(message);
   }
 
   spin(spinText: string) {
-    console.log(`spin(${spinText})`);
+    //console.log(`spin(${spinText})`);
     //debugger;
     if (!spinText) return;
     
@@ -46,7 +46,7 @@ export class SpinnerService implements OnInit, OnDestroy {
   }
   
   stop(spinText: string) {
-    console.log(`stop(${spinText})`);
+    //console.log(`stop(${spinText})`);
     //debugger;
     if (!spinText) return;
 
