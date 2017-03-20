@@ -52,10 +52,6 @@ export class WishListComponent implements OnInit, OnDestroy {
     this.spinnerService.stop('wishlist');
   }
 
-  // testing() {
-  //   console.log('testing 123');
-  // }
-  
   showEdit(w: any) {
     w.editable = true;
     console.log(`showEdit(${w})`);

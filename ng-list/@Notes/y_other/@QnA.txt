@@ -1,0 +1,24 @@
+
+https://github.com/angular/zone.js/
+> "A Zone is an execution context that persists across async tasks. You can think of it as thread-local storage for JavaScript VMs."
+> "Zone.js is a port of this Dart feature to JavaScript".
+> "Kind of like Thread Locals in Java".
+> Zone is an Execution Context.
+> Use Zones for: debugging, testing/mocking, profiling, ??
+> zone.run(function(){ ... });  OnZoneEnter(); OnZoneLeave();
+>> zone.fork(Zone.longStackTraceZone).run(main);  ****************** Awesome for debugging!!!!!!
+>> zone.reset();
+> ** Get better Stack Traces w/ zone.js.
+>> https://www.youtube.com/watch?v=3IqtmUscE_U   // "Brian Ford - Zones - NG-Conf 2014"
+>> https://github.com/angular/zone.js
+
+
+Event Loop in browser.  Synchronous code runs - then items in Queue runs.
+
+
+setTimeout(function(){}, 0);  // Makes code Asynchronous.
+
+
+XX $rootScope.apply() to kick off Digest Cycle. XX
+Backbone & ember (competing w/ ng).
+

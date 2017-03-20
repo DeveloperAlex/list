@@ -1,0 +1,13 @@
+
+
+https://github.com/angular/angular-cli/wiki#running-unit-tests
+> ng test
+>> https://github.com/angular/angular-cli/wiki/test
+> ng e2e
+>> https://github.com/angular/angular-cli/wiki/e2e
+
+
+Test Sites:
+- https://circleci.com/pricing/   // Free for 1 tiny account (1500 minutes per month).
+- https://saucelabs.com/   // Expensive
+

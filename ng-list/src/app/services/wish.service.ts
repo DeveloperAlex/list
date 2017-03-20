@@ -24,10 +24,6 @@ export class WishService {
     this.wishes$.subscribe(console.log);
   }
 
-  // getWishes() : any {
-  //   return [ "hotdogs", "hamburgers" ];
-  // }
-
   // https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0
   getWishesSubscription(): Observable<Object[]> {
     // return Observable.empty();
