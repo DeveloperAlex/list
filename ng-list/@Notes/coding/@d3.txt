@@ -1,6 +1,7 @@
 
 https://github.com/krispo/ng2-nvd3
 > http://krispo.github.io/ng2-nvd3/
+> http://plnkr.co/edit/T4i7Zh?p=preview
 
 
 * Look up nvd3 thingy I used at AIG.  I'm gonna want that code.

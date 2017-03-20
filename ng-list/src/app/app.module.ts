@@ -15,6 +15,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 
 import { AlertModule } from 'ng2-bootstrap';  // https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
+import { nvD3 } from 'ng2-nvd3';
 
 // declarations:
 import { AppComponent } from './app.component';
@@ -88,7 +89,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AboutComponent,
     DockerComponent,
     SpinnerComponent,
-    D3Component
+    D3Component,
+    nvD3
     //SpinnerComponent
   ],
   imports: [
