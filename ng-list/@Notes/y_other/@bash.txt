@@ -14,6 +14,10 @@ lsb_release -a
 > Ubuntu 14.04.3 LTS
 
 
+lsof -i :8080
+> Shows what's running on this Port.
+
+
 $ uname -r   // Gives kernel version
 > 4.8.8-c9
 
@@ -29,4 +33,10 @@ tree
 sudo
 nginx
 man man
+
+
+sudo apt-get update
+
+
+
 
