@@ -23,7 +23,10 @@ http://stackoverflow.com/questions/21611434/what-exactly-does-the-phantomjs-opti
 
 
 ===================
+https://npm.taobao.org/package/karma-phantomjs-launcher
+https://github.com/angular/angular-cli/wiki/test
 https://karma-runner.github.io/0.13/config/configuration-file.html
+http://karma-runner.github.io/1.0/config/configuration-file.html
 > /ng-list/src/test.ts
 > /ng-list/karma.conf.js
           module.exports = function (config) {
@@ -31,6 +34,11 @@ https://karma-runner.github.io/0.13/config/configuration-file.html
               webSecurityEnabled: false,
               basePath: '',
 
+customHeaders: [{
+  match: '.*foo.html',
+  name: 'Service-Worker-Allowed',
+  value: '/'
+}]
 
 
 
