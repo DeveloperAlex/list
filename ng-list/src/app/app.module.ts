@@ -4,8 +4,11 @@ import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-br
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app.routes';
+//import appRoutes from './app.routes';
+
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from '../environments/firebase.config';  // https://www.udemy.com/angular-firebase-application/learn/v4/t/lecture/5798940?start=0  //Lecture 21 @5:17 of 7:24.
 import { MaterialModule, MdProgressSpinnerModule } from '@angular/material';
@@ -25,8 +28,11 @@ import { NetflixListComponent } from './components/netflix-list/netflix-list.com
 import { D3Service } from './components/';
 
 // providers:
+import { AuthGuard } from './auth.guard';
 import { CoreService, SpinnerService } from './core';
-import { WishService } from './services/wish.service';
+//import { WishService } from './services/wish.service';
+import { AuthService, WishService } from './services';
+
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { DockerComponent } from './components/docker/docker.component';
@@ -50,6 +56,24 @@ export class MyHammerConfig extends HammerGestureConfig  {
 //  providers = are services.
 //  bootstrap = launches the app by creating the components (listed in bootstrap) and inserting them into the browser dom.
 @NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule, ReactiveFormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes),
+    //appRoutes,
+    AngularFireModule.initializeApp(firebaseConfig[0]),
+    AlertModule.forRoot(),
+    MaterialModule, MdProgressSpinnerModule
+  ],
+  providers: [
+    AuthGuard, AuthService,
+    CoreService,
+    D3Service,
+    SpinnerService,
+    WishService,
+    { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -61,25 +85,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     D3Component,
     nvD3
   ],
-  imports: [
-    BrowserModule,
-    FormsModule, ReactiveFormsModule,
-    HttpModule,
-    RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(firebaseConfig[0]),
-    AlertModule.forRoot(),
-    MaterialModule, MdProgressSpinnerModule
-  ],
-  providers: [
-    CoreService,
-    D3Service,
-    SpinnerService,
-    WishService,
-    { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
-  ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-  routes = routes;
+  //routes = routes;
   firebaseConfig = firebaseConfig;
 }

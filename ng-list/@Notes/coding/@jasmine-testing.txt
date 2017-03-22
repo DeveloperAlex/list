@@ -1,5 +1,10 @@
 
 
+http://karma-runner.github.io/1.0/plus/cloud9.html
+** Notes on how to run Karma on C9.
+
+
+
 https://github.com/angular/angular-cli/wiki#running-unit-tests
 > ng test
 >> https://github.com/angular/angular-cli/wiki/test
