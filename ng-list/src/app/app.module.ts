@@ -28,10 +28,11 @@ import { NetflixListComponent } from './components/netflix-list/netflix-list.com
 import { D3Service } from './components/';
 
 // providers:
-import { AuthGuard } from './auth.guard';
+// import { AuthGuard } from './auth.guard';
 import { CoreService, SpinnerService } from './core';
-//import { WishService } from './services/wish.service';
-import { AuthService, WishService } from './services';
+// import { WishService } from './services/wish.service';
+// import { AuthService, WishService } from './services';
+import { WishService } from './services';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -67,7 +68,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MaterialModule, MdProgressSpinnerModule
   ],
   providers: [
-    AuthGuard, AuthService,
+    //AuthGuard, AuthService,
     CoreService,
     D3Service,
     SpinnerService,

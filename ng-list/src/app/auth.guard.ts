@@ -21,6 +21,7 @@
 // }
 
 
+/*
 // https://angular.io/docs/ts/latest/guide/router.html#!#query-parameters-and-fragments
 import { Injectable }       from '@angular/core';
 import {
@@ -76,4 +77,4 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     return false;
   }
 }
-
+*/
