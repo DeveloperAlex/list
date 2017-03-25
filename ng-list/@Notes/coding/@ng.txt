@@ -1,4 +1,7 @@
 
+http://angularjs.blogspot.com/2017/03/angular-400-now-available.html
+
+
 Angular CLI
 - ng g component wish-list
 - ng g class myclass

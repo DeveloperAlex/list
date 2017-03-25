@@ -19,6 +19,11 @@ https://community.c9.io/t/anyone-using-c9-to-do-the-angular2-project/7078/12?u=d
 https://status.c9.io/
 
 
+Sharing (this is what it looks like when you share - readonly):
+> https://c9.io/chbroggi/cbr_mongodb/files
+>> https://ide.c9.io/chbroggi/cbr_mongodb
+
+
 
 https://community.c9.io/t/can-i-install-rstudio-on-c9/12310/8
 > https://github.com/acabey/cloud9-vnc
