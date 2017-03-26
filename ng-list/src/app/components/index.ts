@@ -8,4 +8,7 @@ export { HomeComponent } from './home/home.component';
 export { NetflixListComponent } from './netflix-list/netflix-list.component';
 export { WishListComponent } from './wish-list/wish-list.component';
 
-// export { GridComponent, DateComponent, HeaderComponent, HeaderGroupComponent } from './grid';
+export { GridComponent } from './grid/grid.component';
+export { DateComponent } from './grid/date.component';
+export { HeaderComponent } from './grid/header.component';
+export { HeaderGroupComponent } from './grid/header-group.component';

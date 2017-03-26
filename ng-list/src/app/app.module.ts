@@ -23,30 +23,16 @@ import {AgGridModule} from "ag-grid-angular/main";  // https://embed.plnkr.co/EI
 
 // declarations:
 import { AppComponent } from './app.component';
-import { WishListComponent } from './components/wish-list/wish-list.component';
-import { NetflixListComponent } from './components/netflix-list/netflix-list.component';
-
-import { D3Service } from './components/';
 
 // providers:
 // import { AuthGuard } from './auth.guard';
-import { CoreService, SpinnerService } from './core';
-// import { WishService } from './services/wish.service';
 // import { AuthService, WishService } from './services';
+
 import { WishService } from './services';
-
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { DockerComponent } from './components/docker/docker.component';
-import { SpinnerComponent } from './core';
-import { D3Component } from './components/d3/d3.component';
-
-// import { GridComponent } from './components/grid/grid.component';
-// import { DateComponent } from './components/grid/date.component';
-// import { HeaderComponent } from './components/grid/header.component';
-// import { HeaderGroupComponent } from './components/grid/header-group.component';
-
-
+import { CoreService, SpinnerService, SpinnerComponent } from './core';
+import { D3Service, NetflixListComponent, WishListComponent } from './components/';
+import { HomeComponent, AboutComponent, DockerComponent, D3Component } from './components';
+import { GridComponent, DateComponent, HeaderComponent, HeaderGroupComponent } from './components';
 
 // https://plnkr.co/edit/LCsiXOtzSedGZDbGQ3f8?p=preview
 export class MyHammerConfig extends HammerGestureConfig  {
@@ -72,13 +58,13 @@ export class MyHammerConfig extends HammerGestureConfig  {
     //appRoutes,
     AngularFireModule.initializeApp(firebaseConfig[0]),
     AlertModule.forRoot(),
-    MaterialModule, MdProgressSpinnerModule
-    // ,AgGridModule.withComponents(
-    // [
-    //     DateComponent,
-    //     HeaderComponent,
-    //     HeaderGroupComponent
-    // ])
+    MaterialModule, MdProgressSpinnerModule,
+    AgGridModule.withComponents(
+    [
+        DateComponent,
+        HeaderComponent,
+        HeaderGroupComponent
+    ])
     ],
   providers: [
     //AuthGuard, AuthService,
@@ -97,11 +83,11 @@ export class MyHammerConfig extends HammerGestureConfig  {
     DockerComponent,
     SpinnerComponent,
     D3Component,
-    nvD3
-    // ,GridComponent,
-    // DateComponent,
-    // HeaderComponent,
-    // HeaderGroupComponent
+    nvD3,
+    GridComponent,
+    DateComponent,
+    HeaderComponent,
+    HeaderGroupComponent
   ],
   bootstrap: [AppComponent],
 })

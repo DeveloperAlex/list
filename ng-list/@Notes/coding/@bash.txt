@@ -10,6 +10,10 @@ du-c9 | sort -h
 > Shows what files are consuming the most disk space.
 
 
+rm -rf node_modules/  //Remove all (recursively) from a folder.
+cp ../npm/package.json .   //Copy file from neighboring folder. From Yarn demo video.
+
+
 lsb_release -a
 > Ubuntu 14.04.3 LTS
 

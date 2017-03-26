@@ -1,0 +1,11 @@
+
+npm shrinkwrap  //Similar to Facebook Yarn.
+npm install -g yarn  //Yarn is deterministic.
+
+yarn add express@4.0.0
+
+Need 2 files to replicate yarn:
+> package.json & yarn.lock
+> yarn install
+
+
