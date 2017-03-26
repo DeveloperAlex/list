@@ -19,6 +19,7 @@ import { MaterialModule, MdProgressSpinnerModule } from '@angular/material';
 
 import { AlertModule } from 'ng2-bootstrap';  // https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 import { nvD3 } from 'ng2-nvd3';
+import {AgGridModule} from "ag-grid-angular/main";  // https://embed.plnkr.co/EINfsm/?show=preview
 
 // declarations:
 import { AppComponent } from './app.component';
@@ -39,6 +40,12 @@ import { AboutComponent } from './components/about/about.component';
 import { DockerComponent } from './components/docker/docker.component';
 import { SpinnerComponent } from './core';
 import { D3Component } from './components/d3/d3.component';
+
+// import { GridComponent } from './components/grid/grid.component';
+// import { DateComponent } from './components/grid/date.component';
+// import { HeaderComponent } from './components/grid/header.component';
+// import { HeaderGroupComponent } from './components/grid/header-group.component';
+
 
 
 // https://plnkr.co/edit/LCsiXOtzSedGZDbGQ3f8?p=preview
@@ -66,7 +73,13 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AngularFireModule.initializeApp(firebaseConfig[0]),
     AlertModule.forRoot(),
     MaterialModule, MdProgressSpinnerModule
-  ],
+    // ,AgGridModule.withComponents(
+    // [
+    //     DateComponent,
+    //     HeaderComponent,
+    //     HeaderGroupComponent
+    // ])
+    ],
   providers: [
     //AuthGuard, AuthService,
     CoreService,
@@ -85,6 +98,10 @@ export class MyHammerConfig extends HammerGestureConfig  {
     SpinnerComponent,
     D3Component,
     nvD3
+    // ,GridComponent,
+    // DateComponent,
+    // HeaderComponent,
+    // HeaderGroupComponent
   ],
   bootstrap: [AppComponent],
 })

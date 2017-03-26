@@ -2,9 +2,12 @@
 http://angularjs.blogspot.com/2017/03/angular-400-now-available.html
 > https://github.com/angular/angular-cli/#updating-angular-cli
 
+https://github.com/angular/angular-cli/wiki/generate-component
+
 
 Angular CLI
 - ng g component wish-list
+>> --flat = don't put into folder.
 - ng g class myclass
 - ng g service myservice
 - https://github.com/angular/angular-cli/#generating-components-directives-pipes-and-services
