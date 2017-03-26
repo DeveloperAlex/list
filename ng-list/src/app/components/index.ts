@@ -9,6 +9,6 @@ export { NetflixListComponent } from './netflix-list/netflix-list.component';
 export { WishListComponent } from './wish-list/wish-list.component';
 
 export { GridComponent } from './grid/grid.component';
-export { DateComponent } from './grid/date.component';
-export { HeaderComponent } from './grid/header.component';
-export { HeaderGroupComponent } from './grid/header-group.component';
+export { DateComponent } from './grid/components/date.component';
+export { HeaderComponent } from './grid/components/header.component';
+export { HeaderGroupComponent } from './grid/components/header-group.component';
