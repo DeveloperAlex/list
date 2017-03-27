@@ -1,7 +1,7 @@
 // https://embed.plnkr.co/EINfsm/?show=preview
 
-// export default class RefData {
-export class RefData {
+export default class RefData {
+// export class RefData {
 
     static IT_SKILLS = ['android', 'css', 'html5', 'mac', 'windows'];
     static IT_SKILLS_NAMES = ['Android', 'CSS', 'HTML 5', 'Mac', 'Windows'];

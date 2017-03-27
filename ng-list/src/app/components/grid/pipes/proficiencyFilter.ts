@@ -1,4 +1,4 @@
-import {IFilter,IFilterParams} from "ag-grid/main";
+import { IFilter, IFilterParams } from "ag-grid/main";
 
 var FILTER_TITLE =
     '<div style="text-align: center; background: lightgray; width: 100%; display: block; border-bottom: 1px solid grey;">' +
@@ -19,8 +19,8 @@ var PROFICIENCY_ABOVE80 = 'above80';
 var PROFICIENCY_NAMES = ['No Filter', 'Above 40%', 'Above 60%', 'Above 80%'];
 var PROFICIENCY_VALUES = [PROFICIENCY_NONE, PROFICIENCY_ABOVE40, PROFICIENCY_ABOVE60, PROFICIENCY_ABOVE80];
 
-//export default class ProficiencyFilter implements IFilter {
-export class ProficiencyFilter implements IFilter {
+export default class ProficiencyFilter implements IFilter {
+// export class ProficiencyFilter implements IFilter {
     private filterChangedCallback:Function;
     private selected:string;
     private valueGetter:Function;

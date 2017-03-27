@@ -1,6 +1,8 @@
-// import RefData from '../data/refData';
-import { RefData } from '../data/refData';
-import {IFilter,IFilterParams} from "ag-grid/main";
+// import RefData from '../data/refData';  // Correct if we're not using the Barrel.
+// import { RefData } from '../data/refData';
+import { RefData } from '../data/';
+
+import { IFilter, IFilterParams } from "ag-grid/main";
 
 var SKILL_TEMPLATE =
     '<label style="border: 1px solid lightgrey; margin: 4px; padding: 4px; display: inline-block;">' +
@@ -18,8 +20,8 @@ var FILTER_TITLE =
     '<b>TITLE_NAME</b>' +
     '</div>';
 
-// export default class SkillFilter implements IFilter {
-export class SkillFilter implements IFilter {
+export default class SkillFilter implements IFilter {
+// export class SkillFilter implements IFilter {
     private filterChangedCallback:Function;
     private model:any;
 
