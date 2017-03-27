@@ -33,6 +33,7 @@ import { CoreService, SpinnerService, SpinnerComponent } from './core';
 import { D3Service, NetflixListComponent, WishListComponent } from './components/';
 import { HomeComponent, AboutComponent, DockerComponent, D3Component } from './components';
 import { GridComponent, DateComponent, HeaderComponent, HeaderGroupComponent } from './components';
+import { RichGridComponent } from './components/grid/components/rich-grid.component';
 
 // https://plnkr.co/edit/LCsiXOtzSedGZDbGQ3f8?p=preview
 export class MyHammerConfig extends HammerGestureConfig  {
@@ -40,6 +41,15 @@ export class MyHammerConfig extends HammerGestureConfig  {
       'swipe': {velocity: 0.4, threshold: 20} // override default settings
   }
 }
+
+
+
+// From app.module.js in Angular 1.5:
+//   agGrid.LicenseManager.setLicenseKey("SHI_on_behalf_of_AIG_Site_10Devs23_January_2018__MTUxNjY2NTYwMDAwMA==8b08adcfc0c4594bacd6eb06e88e1d3b");
+//   agGrid.initialiseAgGridWithAngular1(angular);
+// Maybe something like: AgGridModule.LicenseManager.setLicenseKey("SHI_on_behalf_of_AIG_Site_10Devs23_January_2018__MTUxNjY2NTYwMDAwMA==8b08adcfc0c4594bacd6eb06e88e1d3b");
+
+
 
 //  See bottom of cheatsheet for ideas:  https://angular.io/docs/ts/latest/guide/cheatsheet.html
 
@@ -87,7 +97,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     GridComponent,
     DateComponent,
     HeaderComponent,
-    HeaderGroupComponent
+    HeaderGroupComponent,
+    RichGridComponent
   ],
   bootstrap: [AppComponent],
 })
