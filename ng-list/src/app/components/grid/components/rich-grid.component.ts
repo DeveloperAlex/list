@@ -14,22 +14,26 @@
 import {Component, ViewEncapsulation} from "@angular/core";
 import {GridOptions} from "ag-grid/main";
 
-import ProficiencyFilter from '../filters/proficiencyFilter';
-import SkillFilter from '../filters/skillFilter';
+import ProficiencyFilter from '../pipes/proficiencyFilter';
+import SkillFilter from '../pipes/skillFilter';
 import RefData from '../data/refData';
 
 // only import this if you are using the ag-Grid-Enterprise
 import 'ag-grid-enterprise/main';   // TODO: Is this needed?  Ran: npm install --save ag-grid-enterprise
 
-import {HeaderGroupComponent} from "../header-group-component/header-group.component";
-import {DateComponent} from "../date-component/date.component";
-import {HeaderComponent} from "../header-component/header.component";
+// import {HeaderGroupComponent} from "../header-group-component/header-group.component";
+// import {DateComponent} from "../date-component/date.component";
+// import {HeaderComponent} from "../header-component/header.component";
+import {HeaderGroupComponent} from ".//header-group.component";
+import {DateComponent} from "./date.component";
+import {HeaderComponent} from "./header.component";
+
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     selector: 'rich-grid',
     templateUrl: 'rich-grid.component.html',
-    styleUrls: ['rich-grid.css', 'proficiency-renderer.css'],
+    styleUrls: ['rich-grid.component.css', 'proficiency-renderer.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class RichGridComponent {

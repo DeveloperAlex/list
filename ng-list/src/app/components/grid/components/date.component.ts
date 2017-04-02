@@ -16,7 +16,7 @@ import {IDateAngularComp} from "ag-grid-angular/main";
 
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     selector: 'ag-full-width-grid',
     templateUrl: 'date.component.html',
     styleUrls: ['date.component.css'],

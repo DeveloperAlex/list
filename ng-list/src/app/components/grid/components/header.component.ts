@@ -19,7 +19,7 @@ interface MyParams extends IHeaderParams {
 }
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     templateUrl: 'header.component.html',
     styleUrls: ['header.component.css']
 })

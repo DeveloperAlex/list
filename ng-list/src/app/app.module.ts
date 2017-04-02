@@ -19,7 +19,7 @@ import { MaterialModule, MdProgressSpinnerModule } from '@angular/material';
 
 import { AlertModule } from 'ng2-bootstrap';  // https://github.com/valor-software/ng2-bootstrap/blob/development/docs/getting-started/ng-cli.md
 import { nvD3 } from 'ng2-nvd3';
-import {AgGridModule} from "ag-grid-angular/main";  // https://embed.plnkr.co/EINfsm/?show=preview
+// import {AgGridModule} from "ag-grid-angular/main";  // https://embed.plnkr.co/EINfsm/?show=preview
 
 // declarations:
 import { AppComponent } from './app.component';
@@ -33,7 +33,7 @@ import { CoreService, SpinnerService, SpinnerComponent } from './core';
 import { D3Service, NetflixListComponent, WishListComponent } from './components/';
 import { HomeComponent, AboutComponent, DockerComponent, D3Component } from './components';
 import { GridComponent, DateComponent, HeaderComponent, HeaderGroupComponent } from './components';
-import { RichGridComponent } from './components/grid/components/rich-grid.component';
+// import { RichGridComponent } from './components/grid/components/rich-grid.component';
 
 // https://plnkr.co/edit/LCsiXOtzSedGZDbGQ3f8?p=preview
 export class MyHammerConfig extends HammerGestureConfig  {
@@ -69,12 +69,12 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AngularFireModule.initializeApp(firebaseConfig[0]),
     AlertModule.forRoot(),
     MaterialModule, MdProgressSpinnerModule,
-    AgGridModule.withComponents(
-    [
-        DateComponent,
-        HeaderComponent,
-        HeaderGroupComponent
-    ])
+    // AgGridModule.withComponents(
+    // [
+    //     DateComponent,
+    //     HeaderComponent,
+    //     HeaderGroupComponent
+    // ])
     ],
   providers: [
     //AuthGuard, AuthService,
@@ -93,12 +93,12 @@ export class MyHammerConfig extends HammerGestureConfig  {
     DockerComponent,
     SpinnerComponent,
     D3Component,
-    nvD3,
-    GridComponent,
-    DateComponent,
-    HeaderComponent,
-    HeaderGroupComponent,
-    RichGridComponent
+    nvD3
+    // GridComponent,
+    // DateComponent,
+    // HeaderComponent,
+    // HeaderGroupComponent,
+    // RichGridComponent
   ],
   bootstrap: [AppComponent],
 })

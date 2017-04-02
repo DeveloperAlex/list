@@ -15,7 +15,7 @@ import {IHeaderGroupParams} from "ag-grid/main";
 import {IHeaderGroupAngularComp} from "ag-grid-angular/main";
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     templateUrl: 'header-group.component.html',
     styleUrls: ['header-group.component.css']
 })

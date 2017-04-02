@@ -1,6 +1,4 @@
 // https://embed.plnkr.co/EINfsm/?show=preview
-// https://www.ag-grid.com/example-angular-rich-grid/?framework=all#gsc.tab=0
-// https://www.ag-grid.com/ng2-example/index.html?fromDocs=true&example=rich-grid
 
 export default class RefData {
 // export class RefData {
