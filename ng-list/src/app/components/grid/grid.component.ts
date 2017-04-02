@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { RichGridComponent } from './components';
 
 @Component({
   selector: 'da-grid',

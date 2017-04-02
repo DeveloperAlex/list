@@ -1,5 +1,8 @@
 // https://embed.plnkr.co/EINfsm/?show=preview
 
+// Another example (not this one):
+// > https://github.com/ceolter/ag-grid-angular-example/tree/master/angular-cli
+
 export default class RefData {
 // export class RefData {
 
