@@ -1,0 +1,24 @@
+MySql
+
+postgresql
+
+mariadb - MySql creator created this - since Oracle bought mysql.
+
+https://www.mysql.com/products/community/
+https://community.c9.io/t/setting-up-mysql/1718
+https://github.com/NilsHoyer/MySQL-Front
+https://dev.mysql.com/doc/
+
+
+
+less /etc/mysql/my.cnf
+    # Remember to edit /etc/mysql/debian.cnf when changing the socket location.
+    [client]
+    port            = 3306
+    socket          = /var/run/mysqld/mysqld.sock
+
+
+8080, 8081, and 8082 are the only available ports on a hosted Cloud9 workspace.
+
+
+

@@ -1,0 +1,6 @@
+
+
+mongodb://<dbuser>:<dbpassword>@ds145369.mlab.com:45369/nglist
+    ID= nglistUser
+    PW= nglist666User
+

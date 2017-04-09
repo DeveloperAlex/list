@@ -5,6 +5,7 @@ sudo -i
 > whoami --> ubuntu
 >> su - postgres  // To switch to another user.
 
+sudo service --status-all
 
 du-c9 | sort -h
 > Shows what files are consuming the most disk space.
@@ -40,6 +41,12 @@ man man
 
 
 sudo apt-get update
+
+
+One way to install node & npm:
+> sudo apt-get update
+> sudo apt-get install nodejs
+> sudo apt-get install npm
 
 
 
