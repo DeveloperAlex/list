@@ -1,0 +1,29 @@
+{
+  "name": "nglist-server",
+  "version": "1.0.0",
+  "description": "Node.js server-side of Angular 4 app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloperAlex/list.git"
+  },
+  "keywords": [
+    "node.js",
+    "ng4"
+  ],
+  "author": "DeveloperAlex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeveloperAlex/list/issues"
+  },
+  "homepage": "https://github.com/DeveloperAlex/list#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.9.4"
+  }
+}
