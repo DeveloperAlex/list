@@ -11,6 +11,9 @@ var mongodb = require("mongodb");
 app.use(bodyParser.json());
 
 
+var apiRoutes = require('./routes/apiRoutes');
+app.use('/api', apiRoutes);
+
 
 // var server = app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
 var server = app.listen(8082, process.env.IP || "0.0.0.0", function(){
