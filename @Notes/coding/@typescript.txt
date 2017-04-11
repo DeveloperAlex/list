@@ -1,0 +1,19 @@
+
+===============================================================================
+http://alm.tools/
+https://github.com/alm-tools/alm
+https://alm-tools.gitbooks.io/alm/content/
+https://community.c9.io/t/typescript-autocompletion/594/20
+
+
+I installed it on a vm with:
+
+~/workspace $ sudo npm install alm -g
+
+And ran it with:
+
+~/workspace $ alm
+
+Then click the Preview button and Preview Running Application to use the editor.
+===============================================================================
+
