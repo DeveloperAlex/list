@@ -29,7 +29,7 @@ import { AppComponent } from './app.component';
 // import { AuthGuard } from './auth.guard';
 // import { AuthService, WishService } from './services';
 
-import { WishService } from './services';
+import { NodejsService, WishService } from './services';
 import { CoreService, SpinnerService, SpinnerComponent } from './core';
 import { D3Service, NetflixListComponent, WishListComponent } from './components/';
 import { HomeComponent, AboutComponent, DockerComponent, D3Component } from './components';
