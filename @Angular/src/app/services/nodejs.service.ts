@@ -1,13 +1,41 @@
 import { Injectable } from '@angular/core';
-import { Http, HTTP_PROVIDERS } from '@angular/http';
-import 'rxjs/add/operator/map'
+import { Http, Response } from '@angular/http';  // HTTP_PROVIDERS
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 
 @Injectable()
 export class NodejsService {
+  private restfulUrl = 'https://ng2-list-001-nodejs-developeralex.c9users.io/api/';
 
-  constructor(http: Http) { 
-    
+  constructor(private http: Http) { 
+  }
+
+  getPong(): Observable<Object> {
+    return this.http.get(this.restfulUrl + 'pong')
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
+
+  private extractData(res: Response) {
+    debugger;
+    let body = res.json();
+    return body.data || { };
+  }
+
+  private handleError (error: Response | any) {
+    debugger;
+    let errMsg: string;
+    if (error instanceof Response) {
+      const body = error.json() || '';
+      const err = body.error || JSON.stringify(body);
+      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+    } else {
+      errMsg = error.message ? error.message : error.toString();
+    }
+    console.error(errMsg);
+    return Observable.throw(errMsg);
   }
 
 }

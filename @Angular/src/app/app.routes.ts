@@ -4,7 +4,7 @@
 import { RouterModule, Routes } from '@angular/router';
 // import { AuthGuard } from './auth.guard';
 import { AboutComponent, D3Component, DockerComponent, GridComponent, HomeComponent, 
-  NetflixListComponent, WishListComponent } from './components/index';
+  NetflixListComponent, NodejsComponent, WishListComponent } from './components/index';
 
 //const routes: Routes = [
 export const routes: Routes = [
@@ -15,6 +15,8 @@ export const routes: Routes = [
   { path: 'home',        component: HomeComponent },
   { path: 'netflixlist', component: NetflixListComponent },
   { path: 'wishlist',    component: WishListComponent },
+  { path: 'nodejs',      component: NodejsComponent },
+
 //  { path: 'chat', canLoad: [AuthGuard], loadChildren: 'app/+group-chat/group-chat.module#GroupChatModule' },
   { path: 'chat', loadChildren: 'app/+group-chat/group-chat.module#GroupChatModule' },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

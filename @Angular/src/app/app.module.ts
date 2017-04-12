@@ -35,6 +35,7 @@ import { D3Service, NetflixListComponent, WishListComponent } from './components
 import { HomeComponent, AboutComponent, DockerComponent, D3Component } from './components';
 import { GridComponent, DateComponent, HeaderComponent, HeaderGroupComponent } from './components';
 import { RichGridComponent } from './components/grid/components/rich-grid.component';
+import { NodejsComponent } from './components/nodejs/nodejs.component';
 
 // https://plnkr.co/edit/LCsiXOtzSedGZDbGQ3f8?p=preview
 export class MyHammerConfig extends HammerGestureConfig  {
@@ -81,6 +82,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
     //AuthGuard, AuthService,
     CoreService,
     D3Service,
+    NodejsService,
     SpinnerService,
     WishService,
     { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
@@ -99,7 +101,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     DateComponent,
     HeaderComponent,
     HeaderGroupComponent,
-    RichGridComponent
+    RichGridComponent,
+    NodejsComponent
   ],
   bootstrap: [AppComponent],
 })
