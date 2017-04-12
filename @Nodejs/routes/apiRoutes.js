@@ -19,12 +19,14 @@ var router = express.Router({
 });
 
 
+// Works - https://ng2-list-001-nodejs-developeralex.c9users.io/api/ping
 router.get('/ping', function(req, res) {
   res.json({pong: Date.now()});
 });
 
 
 
+// /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // <Mongoose>
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,7 +35,7 @@ router.get('/ping', function(req, res) {
 // var passwords = require('../passwords');
 // var mongoose = require('mongoose'); //http://mongoosejs.com/docs/api.html
 // mongoose.set('debug', true);
-// var db = mongoose.connect(passwords.mongolab_com_orders, function(err) {  //https://mongolab.com/databases/orders
+// var db = mongoose.connect(passwords.mlab_com_list, function(err) {  //https://mongolab.com/databases/orders
 //   if (err) {
 //     console.log('Mongoose connect failed. err= ' + err);
 //   }
@@ -43,7 +45,7 @@ router.get('/ping', function(req, res) {
 var passwords = require('../passwords');
 var mongoose = require('mongoose'); //http://mongoosejs.com/docs/api.html
 mongoose.set('debug', true);
-var db = mongoose.connect(passwords.mongolab_com_orders, function(err) {  //https://mongolab.com/databases/orders
+var db = mongoose.connect(passwords.mlab_com_list, function(err) {  //https://mongolab.com/databases/orders
   if (err) {
     console.log('Mongoose connect failed. err= ' + err);
   }
@@ -92,6 +94,6 @@ function gracefulShutdown(msg, callback) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // </Mongoose>
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-
+// */
 
 module.exports = router;
