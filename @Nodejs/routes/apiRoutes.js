@@ -42,7 +42,7 @@ router.get('/ping', function(req, res) {
 // });
 
 
-var passwords = require('../passwords');
+var passwords = require('../_passwords');
 var mongoose = require('mongoose'); //http://mongoosejs.com/docs/api.html
 mongoose.set('debug', true);
 var db = mongoose.connect(passwords.mlab_com_list, function(err) {  //https://mongolab.com/databases/orders
