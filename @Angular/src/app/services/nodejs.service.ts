@@ -12,16 +12,18 @@ export class NodejsService {
   constructor(private http: Http) { 
   }
 
-  getPong(): Observable<Object> {
-    return this.http.get(this.restfulUrl + 'pong')
+  // getPong(): Observable<Object> {
+  getPong(): Observable<any> {
+    return this.http.get(this.restfulUrl + 'ping')
                     .map(this.extractData)
                     .catch(this.handleError);
   }
 
   private extractData(res: Response) {
-    debugger;
-    let body = res.json();
-    return body.data || { };
+    // debugger;
+    let data = res.json();
+    // return body.data || { };
+    return data;
   }
 
   private handleError (error: Response | any) {
