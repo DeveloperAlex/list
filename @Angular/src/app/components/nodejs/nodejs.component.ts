@@ -23,12 +23,30 @@ export class NodejsComponent implements OnInit {
     this.nodejsService.getPong()
     .subscribe(
       pong => {
-        // console.log(`pong= ${JSON.stringify(pong)}`);
-        // debugger;
+        console.log(`pong= ${JSON.stringify(pong)}`);
+        debugger;
         this.pong = JSON.stringify(pong);
+
+/*
+        var result = JSON.stringify(pong);
         
+        // if (result.indexOf('0 - {\"isTrusted\":true}') !== -1) {  //0 - {"isTrusted":true}
+        // if (result.indexOf('0 - {"isTrusted":true}') !== -1) {  //0 - {"isTrusted":true}
+        if (result.indexOf('isTrusted') !== -1) {  //0 - {"isTrusted":true}
+          console.warn(`ERROR-Nodejs/MongoDB is down. JSON.stringify(pong)= ${result}`);
+          debugger;
+          this.pong = "Node.js and/or MongoDB is currently down";
+        } else {
+          this.pong = result;
+        }
+*/
       },
-      error => this.pong = <any>error
+      //error => this.pong = <any>error
+      error => {
+        console.warn(`ERROR-Nodejs/MongoDB is down. ${error}`);
+        // this.pong = <any>error;
+        this.pong = "Sorry, Node.js and/or MongoDB is currently down.";
+      }
     );
     
   }
