@@ -3,3 +3,11 @@
 https://www.linkedin.com/pulse/net-core-cloud-9-ide-douglas-starnes
 
 
+Angular Universal sample using Core:
+> https://github.com/MarkPieszak/aspnetcore-angular2-universal
+
+
+Twitter (#aspnetcore / #dotnetcore):
+> https://twitter.com/hashtag/AspNetCore?src=hash
+
+
