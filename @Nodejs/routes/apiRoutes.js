@@ -48,7 +48,7 @@ var mongoose = require('mongoose'); //http://mongoosejs.com/docs/api.html
 mongoose.set('debug', true);
 
 
-var pw = passwords.mlab_com_list;
+var pw = passwords.passwords.mlab_com_list;
 console.log(`passwords.mlab_com_list= ${pw}`);
 // var db = mongoose.connect(passwords.mlab_com_list, function(err) {  //https://mongolab.com/databases/orders
 // var db = mongoose.connect("mongodb://user:pw@ds145369.mlab.com:45369/nglist", function(err) {  //https://mongolab.com/databases/orders
