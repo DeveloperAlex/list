@@ -4,3 +4,12 @@ mongodb://<dbuser>:<dbpassword>@ds145369.mlab.com:45369/nglist
     ID= nglistUser
     PW= nglist666User
 
+
+RESTful Service:
+> http://docs.mlab.com/data-api
+
+
+https://www.npmjs.com/package/mongodb
+https://www.npmjs.com/package/mongoose
+
+

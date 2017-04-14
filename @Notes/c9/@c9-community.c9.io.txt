@@ -22,6 +22,11 @@ https://status.c9.io/
 Sharing (this is what it looks like when you share - readonly):
 > https://c9.io/chbroggi/cbr_mongodb/files
 >> https://ide.c9.io/chbroggi/cbr_mongodb
+>
+> https://community.c9.io/t/mongoose-connection-cant-be-established-using-mlab/15016
+>> https://ide.c9.io/amanuel2/learn-nodejs
+>
+>> https://c9.io/chbroggi/cbr_mongodb
 
 
 
