@@ -29,7 +29,7 @@ app.use(cors());
 // ########## ROUTES ##############################################################################
 // app.use('/static', express.static(path.join(__dirname, 'public')));  // Currently using "ng serve" for the Angular side. Later switch to node.js serving up the Angular files. // http://expressjs.com/en/starter/static-files.html
 
-// Log bad requests
+// Log bad requests. Note: Code needs improvement - "apiii" passes approved check. Fix later when have time.
 app.use(function (req, res, next) {
   // if (req.originalUrl.indexOf('/api') > -1) {
   var approved = ['api','birds','testing'].some( function(element, index, array){ return ( req.originalUrl.indexOf(element) > -1 ); } );

@@ -1,3 +1,5 @@
+'use strict';
+
 // http://expressjs.com/en/guide/routing.html#express-router
 var express = require('express');
 var router = express.Router();
