@@ -6,14 +6,12 @@
 
 var express = require("express");
 var app = express();
-var cors = require("cors");  //https://github.com/expressjs/cors
+var cors = require("cors");  // https://github.com/expressjs/cors  // Question: Do we need a "options" route? I'm thinking Yes we do.
 
-var bodyParser = require("body-parser");
+var bodyParser = require("body-parser");  // https://expressjs.com/en/4x/api.html#req.body
 var methodOverride = require('method-override');
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));  // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json());  // for parsing application/json
 app.use(methodOverride());
 
 app.use(cors());
@@ -30,6 +28,10 @@ app.use(cors());
 // });
 
 
+// var logger = require('morgan');  // TODO: Should I add this??
+// app.use(logger());
+
+
 // ########## ROUTES ##############################################################################
 // app.use('/static', express.static(path.join(__dirname, 'public')));  // Currently using "ng serve" for the Angular side. Later switch to node.js serving up the Angular files. // http://expressjs.com/en/starter/static-files.html
 
@@ -43,7 +45,7 @@ app.use(function (req, res, next) {  //ALWAYS FIRST
   } else {
     console.log('==BAD== %s ==> %s %s %s', (new Date()).toGMTString(), req.method, req.url, req.path);
     // res.status(404).send("No way...");
-    res.end();  // Die silently.
+    res.end();  // Die silently.  https://expressjs.com/en/4x/api.html#res.end
   }
 });
 
@@ -52,22 +54,20 @@ app.get('/testing', function (req, res, next) {
   res.json({msg: 'Yippy - node.js express restful service is running.'})
 });
 
+// app.all('/api/*', requireAuthentication);  // https://expressjs.com/en/4x/api.html#router.all
+
+var birdRoute = require('./routes/birdRoute');
+app.use('/api/bird', birdRoute);
+
 var apiRoute = require('./routes/apiRoute');
 app.use('/api', apiRoute);
 
-var birdRoute = require('./routes/birdRoute');
-app.use('/bird', birdRoute);
-
 app.use(function (err, req, res, next) {  // ALWAYS LAST  // https://expressjs.com/en/guide/error-handling.html
   console.log('---ERROR----------------------------------');
-  console.warn('err.stack');
-    console.error(err.stack);
-  console.warn('req');
-    console.error(req);
-  console.warn('res');
-    console.error(res);
-  console.warn('err');  // What else is in the err object (besides stack).
-    console.error(err);  // What else is in the err object (besides stack).
+  console.warn('err.stack'); console.error(err.stack);
+  console.warn('req');       console.error(req);
+  console.warn('res');       console.error(res);
+  console.warn('err');       console.error(err);  // What else is in the err object (besides stack).
   console.log('---ERROR----------------------------------');
   res.status(500).send('Ugh, something broke');
 });

@@ -6,20 +6,23 @@ var router = express.Router();
 
 // middleware that is specific to this router
 router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
+  console.log('Time: ', Date.now());
+  next();
 });
 
-// https://ng2-list-001-nodejs-developeralex.c9users.io/birds
-// define the home page route
+// https://ng2-list-001-nodejs-developeralex.c9users.io/api/bird/
 router.get('/', function (req, res) {
-  res.send('Birds home page')
+  res.send('Birds home page');
 });
 
-// https://ng2-list-001-nodejs-developeralex.c9users.io/birds/about
-// define the about route
+// https://ng2-list-001-nodejs-developeralex.c9users.io/api/bird/about
 router.get('/about', function (req, res) {
-  res.send('About birds')
+  res.send('About birds');
+});
+
+// https://ng2-list-001-nodejs-developeralex.c9users.io/api/bird/count/21  ==>  "You see 21 birds"
+router.get('/count/:num', function (req, res) {
+  res.send(`You see ${req.params.num} birds`);
 });
 
 module.exports = router;
