@@ -7,10 +7,14 @@
 var express = require("express");
 var app = express();
 var cors = require("cors");  //https://github.com/expressjs/cors
-var bodyParser = require("body-parser");
-var mongodb = require("mongodb");
-app.use(bodyParser.json());
 
+var bodyParser = require("body-parser");
+var methodOverride = require('method-override');
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+app.use(methodOverride());
 
 app.use(cors());
 // OPTIONS verb needs to be handled too (for CORS - preflight requests).
@@ -30,9 +34,9 @@ app.use(cors());
 // app.use('/static', express.static(path.join(__dirname, 'public')));  // Currently using "ng serve" for the Angular side. Later switch to node.js serving up the Angular files. // http://expressjs.com/en/starter/static-files.html
 
 // Log bad requests. Note: Code needs improvement - "apiii" passes approved check. Fix later when have time.
-app.use(function (req, res, next) {
+app.use(function (req, res, next) {  //ALWAYS FIRST
   // if (req.originalUrl.indexOf('/api') > -1) {
-  var approved = ['api','birds','testing'].some( function(element, index, array){ return ( req.originalUrl.indexOf(element) > -1 ); } );
+  var approved = ['api','bird','testing'].some( function(element, index, array){ return ( req.originalUrl.indexOf(element) > -1 ); } );
   if (approved) {
     console.log('%s ==> %s %s %s', (new Date()).toGMTString(), req.method, req.url, req.path);
     next();
@@ -46,16 +50,30 @@ app.use(function (req, res, next) {
 // Below works for: https://ng2-list-001-nodejs-developeralex.c9users.io/
 app.get('/testing', function (req, res, next) {
   res.json({msg: 'Yippy - node.js express restful service is running.'})
-})
+});
 
-var apiRoutes = require('./routes/apiRoutes');
-app.use('/api', apiRoutes);
+var apiRoute = require('./routes/apiRoute');
+app.use('/api', apiRoute);
 
-var birds = require('./routes/birds');
-app.use('/birds', birds);
+var birdRoute = require('./routes/birdRoute');
+app.use('/bird', birdRoute);
+
+app.use(function (err, req, res, next) {  // ALWAYS LAST  // https://expressjs.com/en/guide/error-handling.html
+  console.log('---ERROR----------------------------------');
+  console.warn('err.stack');
+    console.error(err.stack);
+  console.warn('req');
+    console.error(req);
+  console.warn('res');
+    console.error(res);
+  console.warn('err');  // What else is in the err object (besides stack).
+    console.error(err);  // What else is in the err object (besides stack).
+  console.log('---ERROR----------------------------------');
+  res.status(500).send('Ugh, something broke');
+});
 
 // https://ng2-list-001-nodejs-developeralex.c9users.io/asdf
-app.use(function (req, res, next) {
+app.use(function (req, res, next) {  //ALWAYS LAST
   res.status(404).send("Sorry...");
 });
 // ########## ROUTES ##############################################################################

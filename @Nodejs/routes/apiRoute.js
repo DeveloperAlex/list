@@ -5,7 +5,7 @@
 // https://github.com/DeveloperAlex/Orders/blob/master/OrdersExpressSvc/server/routes/apiRoutes.js
 
 
-var _ = require('lodash');
+// var _ = require('lodash');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser'); //Middleware that creates req.body from either json or url.
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-var router = express.Router({
+var router = express.Router({  // https://expressjs.com/en/4x/api.html#express.router
   mergeParams: true
 });
 
