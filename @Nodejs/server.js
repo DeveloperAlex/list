@@ -26,20 +26,32 @@ app.use(cors());
 // });
 
 
+// ########## ROUTES ##############################################################################
+// app.use('/static', express.static(path.join(__dirname, 'public')));  // Currently using "ng serve" for the Angular side. Later switch to node.js serving up the Angular files. // http://expressjs.com/en/starter/static-files.html
+
 // Below works for: https://ng2-list-001-nodejs-developeralex.c9users.io/
 app.get('/', function (req, res, next) {
   res.json({msg: 'Yippy - node.js express restful service is running.'})
 })
 
-
 var apiRoutes = require('./routes/apiRoutes');
 app.use('/api', apiRoutes);
+
+var birds = require('./routes/birds');
+app.use('/birds', birds);
+
+// https://ng2-list-001-nodejs-developeralex.c9users.io/asdf
+app.use(function (req, res, next) {
+  res.status(404).send("Sorry...");
+});
+// ########## ROUTES ##############################################################################
 
 
 // var server = app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
 //var server = app.listen(8082, process.env.IP || "0.0.0.0", function(){
 var server = app.listen(8080, process.env.IP || "0.0.0.0", function(){
   var addr = server.address();
-  console.log("Node.js Express RESTful server listening at", addr.address + ":" + addr.port);
+  // console.log("Node.js Express RESTful server listening at", addr.address + ":" + addr.port);
+  console.log(`Node.js Express RESTful server listening at ${addr.address}:${addr.port} on ${(new Date()).toGMTString()}`);
 });
 
