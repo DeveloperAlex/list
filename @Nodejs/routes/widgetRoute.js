@@ -32,13 +32,18 @@ router.get('/post/:name', function (req, res) {
 
 
 function find(req, res, name) {
-  Widget.find(name, function(err, widgets) {
+  Widget.find(name).sort({name: 'asc'}).limit(100).exec(function(err, widgets) {
     if (err) {
       console.log(`Find returns an error= ${err}`);
-    } else {
+    } 
+    
+    if (widgets.length > 0) {
       console.log('widgets found', widgets);
       res.status(200).send(widgets);
+    } else {
+      res.status(404).json({info: 'None found'});
     }
+
   });
 }
 
