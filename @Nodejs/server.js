@@ -38,7 +38,7 @@ app.use(cors());
 // Log bad requests. Note: Code needs improvement - "apiii" passes approved check. Fix later when have time.
 app.use(function (req, res, next) {  //ALWAYS FIRST
   // if (req.originalUrl.indexOf('/api') > -1) {
-  var approved = ['api','bird','testing'].some( function(element, index, array){ return ( req.originalUrl.indexOf(element) > -1 ); } );
+  var approved = ['api','bird','testing','widget'].some( function(element, index, array){ return ( req.originalUrl.indexOf(element) > -1 ); } );
   if (approved) {
     console.log('%s ==> %s %s %s', (new Date()).toGMTString(), req.method, req.url, req.path);
     next();
@@ -58,6 +58,9 @@ app.get('/testing', function (req, res, next) {
 
 var birdRoute = require('./routes/birdRoute');
 app.use('/api/bird', birdRoute);
+
+var widgetRoute = require('./routes/widgetRoute');
+app.use('/api/widget', widgetRoute);
 
 var apiRoute = require('./routes/apiRoute');
 app.use('/api', apiRoute);
