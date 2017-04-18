@@ -16,7 +16,7 @@ function daMongo() {
     }
   });
 
-  mongoose.connection.on('open', function () {
+  mongoose.connection.on('open', function () {  // Maybe switch to .once instead of .on - if this gets chatty.
     console.log(`Mongoose connection 'open' event fired`);
   });
 

@@ -17,8 +17,16 @@ widgetSchema.pre('save', function (next) {
   next();
 });
 
+widgetSchema.methods.toString = function() {
+  return `{ name: "${this.name}" }`;
+};
+
+
+//---------------------------------------------------------
 
 var widgetModel = mongoose.model('Widget', widgetSchema);  // Mongoose will create the model for your widgets collection, not your widget collection.
 
+
+//---------------------------------------------------------
 
 module.exports = widgetModel;
