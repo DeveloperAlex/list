@@ -15,8 +15,11 @@ function daMongo() {
       console.log('Mongoose connect failed. err= ' + err);
     }
   });
-  
-  
+
+  mongoose.connection.on('open', function () {
+    console.log(`Mongoose connection 'open' event fired`);
+  });
+
   mongoose.connection.on('connected', function () {
     console.log('Mongoose connection opened');
   });
