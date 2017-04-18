@@ -4,7 +4,7 @@
 var express = require('express');
 var router = express.Router();
 
-var daMongo = require('./_daMongo');
+var daMongo = require('../models/_daMongo');
 var daMongoConnection = daMongo();
 
 var Widget = require('../models/widgetModel');

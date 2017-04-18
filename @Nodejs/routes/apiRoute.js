@@ -27,7 +27,7 @@ router.get('/ping', function(req, res) {
 
 
 
-var daMongo = require('./_daMongo');
+var daMongo = require('../models/_daMongo');
 var daMongoConnection = daMongo();
 
 
