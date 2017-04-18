@@ -14,27 +14,24 @@ var Widget = require('../models/widgetModel');
 // https://mlab.com/databases/nglist/collections/widgets
 // https://ng2-list-001-nodejs-developeralex.c9users.io/api/widget/post/hairdryer  ==>  "You created 'blah' in mongo database"
 router.get('/post/:name', function (req, res) {
-  
   var widget = new Widget({ name: req.params.name });
   widget.save(function(err) {
     if (err) {
       console.error(err);
+      res.status(500).send(err);
     } else {
-      //console.log(`Success! Saved '${req.params.name}' to mongo database`);
       console.log(`Success! Saved '${widget.toString()}' to mongo database`);
+      res.status(201).send(`You created '${widget.toString()}' in mongo database`);
     }
   });
-  
-  //res.status(201).send(`You created '${req.params.name}' in mongo database`);
-  res.status(201).send(`You created '${widget.toString()}' in mongo database`);
-  
 });
 
 
 function find(req, res, name) {
   Widget.find(name).sort({name: 'asc'}).limit(100).exec(function(err, widgets) {
     if (err) {
-      console.log(`Find returns an error= ${err}`);
+      console.error(`Find returns an error= ${err}`);
+      res.status(500).send(err);
     } 
     
     if (widgets.length > 0) {
@@ -50,9 +47,7 @@ function find(req, res, name) {
 // https://mlab.com/databases/nglist/collections/widgets
 // https://ng2-list-001-nodejs-developeralex.c9users.io/api/widget/find/a  ==>  { dump of everything it finds in mongo }
 router.get('/find/:name', function (req, res) {
-  //find(req, res, {name: /ball/});
   var regex = new RegExp(req.params.name, "i");
-  //find(req, res, {name: /req.params.name/});
   find(req, res, {name: regex});
 });
 
@@ -61,7 +56,6 @@ router.get('/find/:name', function (req, res) {
 router.get('/find', function (req, res) {
   find(req, res, {});
 });
-
 
 
 module.exports = router;
