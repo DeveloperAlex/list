@@ -1,7 +1,7 @@
 'use strict';
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var uniqueValidator = require('mongoose-unique-validator');  // https://www.npmjs.com/package/mongoose-unique-validator
+var uniqueValidator = require('mongoose-unique-validator');  // https://www.npmjs.com/package/mongoose-unique-validator // Better than 1100 error: https://docs.mongodb.com/manual/core/index-unique/
 
 //---------------------------------------------------------
 // validators:
