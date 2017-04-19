@@ -28,6 +28,7 @@
     "lodash": "^4.17.4",
     "method-override": "^2.3.8",
     "mongodb": "^2.2.25",
-    "mongoose": "^4.9.4"
+    "mongoose": "^4.9.4",
+    "mongoose-unique-validator": "^1.0.5"
   }
 }

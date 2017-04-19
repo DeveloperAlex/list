@@ -1,6 +1,7 @@
 'use strict';
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var uniqueValidator = require('mongoose-unique-validator');  // https://www.npmjs.com/package/mongoose-unique-validator
 
 //---------------------------------------------------------
 // validators:
@@ -14,7 +15,7 @@ var descriptionValidator = [
 //---------------------------------------------------------
 // schema:
 var widgetSchema = new Schema({
-  name:        { type: String, index: true, trim: true, required: true },
+  name:        { type: String, index: true, unique: true, required: true, uniqueCaseInsensitive: true, trim: true },  // https://www.npmjs.com/package/mongoose-unique-validator
   description: { type: String, trim: true, validate: descriptionValidator },
   color:       { type: String, trim: true },  // required: true, default: 'white', enum: ['red', 'white', 'blue']
   price:       { type: Number, min: 0 },
@@ -23,6 +24,10 @@ var widgetSchema = new Schema({
     tag: { type: String, trim: true }
   }
 }, {timestamps: true});
+
+//---------------------------------------------------------
+// plugins:
+widgetSchema.plugin(uniqueValidator, { type: 'mongoose-unique-validator' });
 
 //---------------------------------------------------------
 // middleware:
