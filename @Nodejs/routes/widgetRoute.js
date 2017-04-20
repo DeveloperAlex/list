@@ -3,7 +3,7 @@
 // http://expressjs.com/en/guide/routing.html#express-router
 var express = require('express');
 var router = express.Router();
-
+var _ = require('lodash');
 var daMongo = require('../models/_daMongo');
 var daMongoConnection = daMongo();
 
@@ -26,6 +26,38 @@ router.get('/post/:name', function (req, res) {
       res.status(201).send(`You created '${widget.toString()}' in mongo database`);
     }
   });
+});
+
+// ------------------------------------------------------------------------------------------------
+
+// https://ng2-list-001-nodejs-developeralex.c9users.io/api/widget/put/oldname/newname
+router.get('/put/:orig_name/:new_name', function (req, res) {
+  Widget.find({name:req.params.orig_name}).exec(function(err, widgets) {
+    if (err) {
+      console.error(`Find returns an error= ${err}`);
+      res.status(500).send(err);
+    } 
+
+    if (widgets.length === 1) {
+      var widget = widgets[0];
+      console.log('Updating orig_name', widget);
+      _.merge(widget, {name:req.params.new_name});  // Better for if we update multiple - not just name.
+      console.log('Updating new_name', widget);
+
+      widget.save(function(err) {
+        if (err) {
+          res.status(500).json({info: 'error during update', error: err});
+        };
+        // res.status(200).json({info: 'Success updating name from '});
+        res.status(200).json({info: `Success updating name from '${req.params.orig_name}' to '${req.params.new_name}'`});
+      });
+      
+    } else {
+      res.status(404).json({info: 'Put encountered a problem'});
+    }
+
+  });
+  
 });
 
 // ------------------------------------------------------------------------------------------------
