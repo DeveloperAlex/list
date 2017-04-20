@@ -10,9 +10,7 @@ var daMongoConnection = daMongo();
 var Widget = require('../models/widgetModel');
 
 
-
 // ------------------------------------------------------------------------------------------------
-
 
 // TODO: Change this from a "get" to a "post" http verb -- for now keep the "get" to make it easier to develop/test with. Obviously don't name it post.
 // https://mlab.com/databases/nglist/collections/widgets
@@ -32,6 +30,7 @@ router.get('/post/:name', function (req, res) {
 
 // ------------------------------------------------------------------------------------------------
 
+// https://ng2-list-001-nodejs-developeralex.c9users.io/api/widget/delete/asdf
 router.get('/delete/:name', function (req, res) {
   Widget.find({name:req.params.name}).exec(function(err, widgets) {
     if (err) {
