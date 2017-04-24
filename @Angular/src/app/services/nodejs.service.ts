@@ -3,11 +3,12 @@ import { Http, Response } from '@angular/http';  // HTTP_PROVIDERS
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import { Config } from "../config";
 
 
 @Injectable()
 export class NodejsService {
-  private restfulUrl = 'https://ng2-list-001-nodejs-developeralex.c9users.io/api/';
+  private restfulUrl = Config.urls.restfulUrl;
 
   constructor(private http: Http) { 
   }
