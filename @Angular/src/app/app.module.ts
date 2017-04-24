@@ -36,6 +36,7 @@ import { HomeComponent, AboutComponent, DockerComponent, D3Component } from './c
 import { GridComponent, DateComponent, HeaderComponent, HeaderGroupComponent } from './components';
 import { RichGridComponent } from './components/grid/components/rich-grid.component';
 import { NodejsComponent } from './components/nodejs/nodejs.component';
+import { ResSecDirective } from './directives/res-sec.directive';
 
 // https://plnkr.co/edit/LCsiXOtzSedGZDbGQ3f8?p=preview
 export class MyHammerConfig extends HammerGestureConfig  {
@@ -102,7 +103,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     HeaderComponent,
     HeaderGroupComponent,
     RichGridComponent,
-    NodejsComponent
+    NodejsComponent,
+    ResSecDirective
   ],
   bootstrap: [AppComponent],
 })
