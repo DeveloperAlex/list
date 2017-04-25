@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs/Rx';
 import { NodejsService } from '../../services';
-
 
 @Component({
   selector: 'da-nodejs',
@@ -12,19 +12,36 @@ export class NodejsComponent implements OnInit {
   // public pong: Observable<any>;
   public pong: any;
 
-  constructor(private nodejsService: NodejsService) { }
+  constructor(private nodejsService: NodejsService, private fb: FormBuilder) { }
 
   ngOnInit() {
-    // debugger;
   }
 
+  onSubmit(value: string): void {
+    console.log('you submitted value: ', value);
+  }
+  
+
   getPong(): void {
-    // debugger;
     this.nodejsService.getPong()
     .subscribe(
       pong => {
         console.log(`pong= ${JSON.stringify(pong)}`);
         this.pong = JSON.stringify(pong);
+      },
+      //error => this.pong = <any>error
+      error => {
+        console.warn(`ERROR-Nodejs/MongoDB is down. ${error}`);
+        // this.pong = <any>error;
+        this.pong = "Sorry, Node.js and/or MongoDB is currently down.";
+      }
+    );
+    
+  }
+
+}
+
+
 
 /*
         var result = JSON.stringify(pong);
@@ -39,15 +56,3 @@ export class NodejsComponent implements OnInit {
           this.pong = result;
         }
 */
-      },
-      //error => this.pong = <any>error
-      error => {
-        console.warn(`ERROR-Nodejs/MongoDB is down. ${error}`);
-        // this.pong = <any>error;
-        this.pong = "Sorry, Node.js and/or MongoDB is currently down.";
-      }
-    );
-    
-  }
-
-}
