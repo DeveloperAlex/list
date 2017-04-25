@@ -24,7 +24,6 @@ export class NodejsComponent implements OnInit {
     .subscribe(
       pong => {
         console.log(`pong= ${JSON.stringify(pong)}`);
-        debugger;
         this.pong = JSON.stringify(pong);
 
 /*
