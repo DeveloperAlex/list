@@ -1,7 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Rx';
 import { NodejsService } from '../../services';
+
+// https://angular.io/docs/ts/latest/guide/reactive-forms.html
+// https://angular.io/docs/ts/latest/cookbook/dynamic-form.html
+// https://angular.io/docs/ts/latest/cookbook/form-validation.html
+// https://angular.io/docs/ts/latest/api/forms/index/FormControl-class.html
+// https://angular.io/docs/ts/latest/api/forms/index/FormGroup-class.html
+// https://angular.io/docs/ts/latest/api/forms/index/FormArray-class.html
 
 @Component({
   selector: 'da-nodejs',
