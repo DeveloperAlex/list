@@ -5,4 +5,5 @@ npm-debug.log
 @Angular/node_modules/
 @Nodejs/node_modules/
 
-ng-list/
+# This folder was created accidentally - so excluded it. Now its fully deleted instead.
+# ng-list/
