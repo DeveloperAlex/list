@@ -31,9 +31,9 @@ export class ResSecDirective implements OnInit, OnDestroy {
     // We should detach the event listener when this directive is destroyed - to avoid memory leaks.
   }
 
-  @HostListener('mouseover') onMouseEnter() {
-    console.log(`Directive ressec fired onMouseEnter`)
-  }
+  // @HostListener('mouseover') onMouseEnter() {
+  //   console.log(`Directive ressec fired onMouseEnter`)
+  // }
   
   // @HostBinding() innerText = "Text changed by ressec directive";  // Works
 
