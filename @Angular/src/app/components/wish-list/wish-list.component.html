@@ -7,9 +7,13 @@
             <!--Below is an example of a Template Reference Variable-->
             <!--https://angular.io/docs/ts/latest/guide/template-syntax.html#!#template-reference-variable-->
             <input #addwish type="text" autofocus placeholder="Add a Wish" maxlength="50" />
+            
+            <!--<button (click)="addWish(addwish.value);addwish.value='';"-->
+            <!--[ngStyle]="{'cursor':addwish.value?'default':'not-allowed'}"-->
+            <!--[disabled]="!addwish.value" class="btn btn-default" ressec="{type:'save'}">Add Wish</button>-->
             <button (click)="addWish(addwish.value);addwish.value='';"
-            [ngStyle]="{'cursor':addwish.value?'default':'not-allowed'}"
-            [disabled]="!addwish.value" class="btn btn-default" ressec="{type:'save'}">Add Wish</button>
+            class="btn btn-default" ressec="{type:'save'}">Add Wish</button>
+            
         </div>
         <br/>
         
