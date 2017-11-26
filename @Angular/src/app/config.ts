@@ -2,6 +2,8 @@
 
 export const Config = {
   urls: {
-    restfulUrl: "https://ng2-list-001-nodejs-developeralex.c9users.io/api/"
+    restfulUrl: "https://ng5-list-002-nodejs-developeralex.c9users.io/api/"
   }
 };
+
+//    restfulUrl: "https://ng2-list-001-nodejs-developeralex.c9users.io/api/"
